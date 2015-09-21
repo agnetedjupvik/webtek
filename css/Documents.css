@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    margin-top: -21px;
+}
+header{
+    margin: 0;
+    background-color: #606aff;
+    color: #151515;
+    text-align: center;
+}
+
+h1#title{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+nav{
+    position: fixed;
+    top: 90px;
+}
