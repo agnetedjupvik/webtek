@@ -15,7 +15,6 @@ h1#title{
     font-weight: bold;
 }
 
-nav{
-    position: fixed;
-    top: 90px;
+figcaption{
+    text-align: center;
 }
