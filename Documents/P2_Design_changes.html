@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P2: Design</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/Documents.css">
+</head>
+<body>
+    <header id="header">
+        <h1 id="title">P2: Design</h1>
+        <p id="credits">
+            Skrevet av Agnete Djupvik, Vemund Santi, Camilla Tran og Emil Taylor Bye<br/>
+            12.oktober 2015
+        </p>
+    </header>
+    <div class="col-xs-12 col-sm-3">
+        <nav>
+            <h2>Innhold</h2>
+            <ol>
+                <li><a href="#administrative_detaljer">Administrative detaljer</a></li>
+                <li><a href="#maalgruppe">Mål og målgruppe</a></li>
+                <li><a href="#struktur">Navigasjonsstruktur</a></li>
+                <li><a href="#layout">Layout og utseende</a>
+                    <ol type="a">
+                        <li><a href="#mockups">Mockups</a></li>
+                    </ol>
+                </li>
+                <li><a href="#innhold">Innhold</a>
+                    <ol>
+                        <li><a href="#hjem">Hjem</a></li>
+                        <li><a href="#om_p15">Om P15</a></li>
+                        <li><a href="#etasjene">Etasjene</a></li>
+                        <li><a href="#heisene">Heisene</a></li>
+                        <li><a href="#linjeforeninger">Linjeforeninger</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ol>
+                </li>
+                <li><a href="#mobil">Mobilvennlighet</a></li>
+                <li><a href="#javascript">Javascript-applikasjoner</a>
+                    <ol>
+                        <li><a href="#heisanimasjon">Heisanimasjon på forsiden</a></li>
+                        <li><a href="#uniform">Javascript for å enkelt inkludere html-filer på sider</a></li>
+                        <li><a href="#dropdown">Drop-down meny</a></li>
+                        <li><a href="#preload">Forhåndslasting av bilder</a></li>
+                    </ol>
+                </li>
+                <li><a href="#plan">Struktur, arbeidsfordeling og deadlines</a>
+                    <ol>
+                        <li><a href="#mappestruktur">Mappestruktur</a></li>
+                        <li><a href="#arbeidsfordeling">Arbeidsfordeling og frister</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+        <h2 id="administrative_detaljer">Administrative detaljer</h2>
+        <p>
+            Klientnavn: Institutt for datateknikk og informasjonsvitenskap ved NTNU (IDI) <br/>
+            Nettsidenavn: P15 <br/>
+            Kontaktperson: Ikke tilgjengelig
+        </p>
+        <h2 id="maalgruppe">Mål og målgruppe</h2>
+        <p>
+            Målet med siden er å informere målgruppen om hva P15 har å tilby for dem.
+            Målgruppen til denne nettsiden er for de som ikke er kjent med P15 fra før av.
+            Nettsiden skal tydelig opplyse hvor bygget ligger hen, hvor mange arbeidssaler det er, og
+            hva bygget har å tilby med for eksempel printere. Siden skal også informere om hvem som har
+            tilgang til de ulike stedene på P15.
+            <br/><br/>
+            Målgruppen skal få vite at det er mikrobølgeovn, gratis kaffe og te, bestikk og tallerkener og mye
+            annet tilgjengelig på linjeforeningene sine kontorer. Ellers skal siden gjøre IDI mer
+            kjent som et godt institutt.
+        </p>
+        <h2 id="struktur">Navigasjonsstruktur</h2>
+        <p>
+            Nettsiden sin navigasjonsstruktur kan beskrives som en clique-struktur, som er vist i Figur 1.
+            Figuren illustrerer at du kan nå alle sidene med ett klikk. For eksempel hvis du befinner deg på
+            startsiden, så vil du kunne nå absolutt alle de andre sidene med bare ett klikk. Det samme gjelder for
+            undersider. I menyen vil undersidene vises ved hover, slik at brukeren slipper å klikke for å få dem opp.
+            Grunnen for at vi valgte en clique struktur er fordi det gir mye frihet for brukerne. Da slipper
+            brukeren å klikke mange ganger hvis brukeren skal til en annen, spesifikk side.
+        </p>
+        <figure>
+            <img src="images/Figur1.png" class="img-responsive" alt="Figur 1">
+            <figcaption>Figur 1: Navigasjonsstrukturen av nettsiden for desktop-klienter (clique)</figcaption>
+        </figure><br/>
+        <p>
+            Figur 1 gjelder ikke for mobil. På mobil så må du inn på menyen og klikke flere klikk
+            for å komme til en underside, se Figur 2. Alle sidene har tilknytning til menu.html som lastes inn med
+            et script for å representere menyen. For å komme seg til
+            andre sider, må man gå via menu.html (grønn node). Hvis man befinner seg på en underside, så vil man
+            kunne navigere til andre undersider i samme "kategori" med 1 klikk. Eksempel på dette er at hvis vi vil
+            komme til online.html,
+            og vi er på index.html, så fungerer navigasjonen slik: index.html → menu.html → linjeforeninger/index.html →
+            online.html. Dette tar altså 3 klikk. Det tar ett klikk for å komme til abakus.html fra online.html,
+            og to klikk for å komme til linjeforeninger/index.html fra online.html.
+        </p>
+        <figure>
+            <img src="images/Figur2.png" class="img-responsive" alt="Figur 2">
+            <figcaption>Figur 2: Navigasjons strukturen av nettsiden på mobil (clique)</figcaption>
+        </figure><br/>
+        <h2 id="layout">Layout og utseende</h2>
+        <p>
+            Som nevnt i P1 har vi valgt å holde utseendet på siden svært enkelt, med fokus på innholdet. Vi ønsker å
+            ha en gjennomgående layout. Samme navbar og footer skal gå igjen på hver eneste side på desktop-versjonen.
+            På denne måten blir
+            layouten gjenkjennelig, og brukeren trenger ikke bruke tid på å analysere en ny layout for hver side.
+            <br/><br/>
+            Når det kommer til farger har vi også valgt å holde tonene enkle og rene, uten for mange farger i konflikt.
+            Ulike toner av blå er benyttet i mockupene, og med kontrastfarger på skrift i hvitt.
+            På fontvalg har vi valgt å gå for en moderne sans serif-font som skal være gjennomgående på hele siden,
+            nærmere bestemt Raleway. Raleway er en enkel font å implementere fordi det er en gratis font som blant annet
+            leveres gjennom Google Fonts, noe som gjør det enkelt for oss å implementere direkte derfra. Hvis vi
+            skulle ha ekstra sikkerhet på vår side og ta hensyn til at Google sine servere eventuelt kan gå ned (Som om det
+            noen gang kommer til å skje...) kan vi også velge å hoste fonten lokalt, ettersom den er gratis å laste ned.
+        </p>
+        <h3 id="mockups">Mockups</h3>
+        <p>
+            Vedlagt finnes et sett med mockups som beskriver våre tanker om hvordan vi ønsker designet skal være.
+            Som beskrevet er det fokus på få farger, enkle linjer og intuitiv navigering. Det er også tegnet opp
+            hvordan vi ønsker å strukturere navigasjon. For de punktene som har flere underpunkter, som for eksempel
+            etasjer, vises disse ved å holde musepekeren over dem, som vist i bilde 2 og 3. Disse lar vi variere med
+            størrelsen på innholdet i menyene, slik at vi unngår å over- eller underdimensjonere boksene.
+            <br/><br/>
+            Det er et stort fokus på bilder på nettsidene, med ett stort bilde på hver side. Dette er fordi siden,
+            som tross alt er en informasjonsside, ikke skal være alt for teksttung. Vi ønsker heller at det skal være
+            et fokus på å også finne “stemningen” på P15, ved å vise bilder av omgivelsene. Dette krever gode
+            bilder fra vår side, at oppløsningen skal være god og kvaliteten god. Vi tenker å ta litt egne
+            bilder samt også å be om å få lånt noen fra NTNU sin offisielle Flickr, fra for eksempel IDI Open
+            eller NCPC på P15.
+        </p>
+        <img src="images/mockup1.png" class="img-responsive" alt="Mockup 1"><br/>
+        <img src="images/mockup2.png" class="img-responsive" alt="Mockup 2"><br/>
+        <img src="images/mockup3.png" class="img-responsive" alt="Mockup 3"><br/>
+        <img src="images/mockup4.png" class="img-responsive" alt="Mockup 4"><br/>
+        <img src="images/mockup5.png" class="img-responsive" alt="Mockup 5"><br/>
+        <img src="images/mockup6.png" class="img-responsive" alt="Mockup 6"><br/>
+        <img src="images/mockup7.png" class="img-responsive" alt="Mockup 7">
+
+        <h2 id="innhold">Innhold</h2>
+        <h3 id="hjem">Hjem</h3>
+        <p>
+            På hovedsiden vil du møtes av en side(bilde 2 og 3) som skal fungere som en velkomstside. Her vil du
+            finne en introduksjon av selve nettsiden og dens formål. Denne siden skal fungere som en peker til de
+            mange sidene man kan finne. Man skal også her få et klart bilde av hvordan P15 ser ut utenfra. Derfor
+            har vi brukt et bilde som viser P15 fra vinkelen man har når man går av bussen på Gløshaugen Nord, en
+            plass mange ofte kommer fra når de møter bygget.
+            <br/>
+            Et utkast til tekst er: <br/>
+            "<i>Velkommen til P15!
+            <br/>
+            Dette er en nettside som skal fortelle deg om P15 og alt bygget har å tilby. I navigasjonsmenyen øverst
+            kan du klikke deg til informasjon om det du måtte ønske å vite. Det kan være alt fra informasjon om
+            linjeforeningene og hvor du kan få gratis kaffe til hvor de beste printerne finnes.</i>"
+        </p>
+        <h3 id="om_p15">Om P15</h3>
+        <p>
+            Denne siden er ment til å gi mer generell informasjon om P15. Dette innebærer også en god del om P15 sin
+            historie. Dette innebærer hvilke arkitekter som har tegnet huset, men også for eksempel at det var en
+            parkeringsplass på området før, og at det er der navnet P15 kommer fra.
+            <br/><br/>
+            I tillegg vil vi også gi en innføring i kallenavnet “Fragleberget”, som er gitt ettersom navnene på alle
+            datasalene kommer fra karakterer i TV-serien <a href="https://no.wikipedia.org/wiki/Fragglene">Fragglene</a>.
+        </p>
+        <h3 id="etasjene">Etasjene</h3>
+        <p>
+            For hver etasje skal det finnes en side med en generell oversikt over hva som finnes i denne etasjen.
+            Dette innebærer en etasjeoversikt hentet fra NTNU sine nettsider, i tillegg til mer utdypende
+            informasjon om hva som finnes av datasaler, linjeforeningskontorer og andre rom. Her vil det for
+            eksempel være informasjon om hvilke datasaler som er stillesaler i eksamensperioder, og hvorvidt det
+            finnes tynnklienter på salene.
+            <br/><br/>
+            I tillegg skal siden informere om hva slags printere som finnes i etasjen og linke til NTNU sine sider
+            for oppsett av disse, samt en oversikt over hvilke tavler som finnes i etasjen.
+        </p>
+        <h3 id="heisene">Heisene</h3>
+        <p>
+            Seksjonen om heisene skal kun bestå av en side, og skal fortelle litt generelt om heisene. Dette
+            innebærer informasjon om at de går til alle etasjene, at etasjeindikatoren på heisen til venstre er
+            ødelagt for øke spenningen i hverdagen, og hvilket godt alternativ heisene er til trappene ettersom
+            trappene lukter klor.
+            <br/><br/>
+            Det bør også informeres om heisenes formål, som klart er at de skal gå tregt for å få studentene til å
+            ta seg litt ekstra tid til hverdagen for å reflektere over de store spørsmålene i livet.
+            <br/><br/>
+            I tillegg kan det informeres om NTNU-faget <a href="http://www.ntnu.no/studier/emner/TTK4145/2015#tab=omEmnet">TTK4145 Sanntidsprogrammering</a>, hvor prosjektet innebærer å
+            lære seg å programmere en eller flere heiser. Det kan oppfordres til å ta dette faget for at heisene skal
+            begynne å gå litt raskere.
+        </p>
+        <h3 id="linjeforeninger">Linjeforeninger</h3>
+        <p>
+            Sidene for linjeforeningene skal informere om tilbudet som finnes her. Dette betyr både at man skal
+            fortelle om hva linjeforeningene driver med, men også hva man som alminnelig student kan oppleve ved å
+            gå inn hit. Dette innebærer å fortelle om at det er gratis kaffe og te til alle, og i tillegg fortelle
+            om utvalget kontorene eventuelt har av enkel mat og hvordan man kan kjøpe dette.
+        </p>
+        <h3 id="kontakt">Kontakt</h3>
+        <p>
+            Her skal det være linker til nettsidene til IDI, Online og Abakus. I tillegg skal det være konkret
+            kontaktinformasjon til disse, altså en e-postadresse til e-postmottaket deres hvor man kan henvende
+            seg direkte til dem.
+            <br/><br/>
+            Disse er:<br/>
+            <a href="mailto:postmottak@idi.ntnu.no">postmottak@idi.ntnu.no</a><br/>
+            <a href="mailto:abakus@abakus.no">abakus@abakus.no</a><br/>
+            <a href="mailto:kontakt@online.ntnu.no">kontakt@online.ntnu.no</a>
+            <br/><br/>
+            Ellers skal det ikke være noe mer innhold på denne siden foruten et stemningsbilde, slik at brukeren
+            opplever at han ikke må “lete” lenge for å finne frem til kontaktinformasjonen han/hun trenger.
+        </p>
+        <h2 id="mobil">Mobilvennlighet</h2>
+        <p>
+            Nettsiden vår er avhengig av å kunne brukes på mange plattformer. Dette kan bety alt fra fullskjerms PC,
+            til en liten smarttelefon. Derfor er vi avhengig i å ha en viss responsivitet i designet vårt, og
+            samtidig sørge for at det ikke blir rotete med like mye innhold på en liten skjerm.
+        </p>
+        <div class="col-sm-4">
+            <img src="images/mobil2.png" class="img-responsive" alt="Mobil 2">
+        </div>
+        <div class="col-sm-4">
+            <img src="images/mobil3.png" class="img-responsive" alt="Mobil 3">
+        </div>
+        <div class="col-sm-4">
+            <img src="images/mobil4.png" class="img-responsive" alt="Mobil 4">
+        </div><br/>
+        <p>
+            Vi har valgt å gå for å legge menyen til en sidebar som utvides ved en knapp øverst i høyre hjørne.
+            Her har vi måttet fjerne noen menyelementer, logisk nok fordi at man ikke har muligheten til hover på
+            samme måte på telefon som man kan på PC med mus. Derfor må vi sørge for at sidene som inneholder pekere
+            til andre sider, er klare og konsise og enkelt viser til disse. Vi har valgt å ikke gå for å ha for
+            eksempel Online og Abakus under “Linjeforeninger” i denne menyen, fordi det ville gjort at vi måtte
+            komprimere teksten mer og det ville økt sjansen for å komme borti feil knapp.
+            <br/><br/>
+            Når det kommer til innholdet på selve siden velger vi å legge bildet til full skjermbredde når man
+            kommer på en skjermstørrelse under 768 piksler (Standard bootstrap-breakpoint). Da legges teksten til
+            over og under bildet, og navigasjonsbaren erstattes med en meny som kommer inn fra siden.
+            <br/><br/>
+            For å øke brukervennligheten på mobil ønsker vi å legge til en ekstra meny under Etasjer og
+            Linjeforeninger, illustrert i det siste bildet. Denne menyen skal alltid vises på toppen av siden,
+            rett under hovedmenyen, når man er på en side som ligger under hovedsiden. Dette betyr at for
+            Etasjer skal man ha en meny på alle etasjene, og Linjeforeninger skal ha lenker til sidene for
+            Online og Abakus. Slik kan man lett navigere mellom undersider på kun ett trykk.
+        </p>
+        <h2 id="javascript">Javascript-applikasjoner</h2>
+        <h3 id="heisanimasjon">Heisanimasjon på forsiden</h3>
+        <p>
+            For å gi de besøkende av siden en autentisk P15-opplevelse, skal forsiden inneholde en heis-animasjon
+            når man først kommer inn på forsiden. Dette kan fort bli et irritasjonsmoment for folk som skal bruke
+            siden flere ganger, så det er viktig at man sørger for at animasjonen bare vises den første gangen man
+            kommer inn på forsiden.
+        </p>
+        <h3 id="uniform">Javascript for å enkelt inkludere html-filer på sider</h3>
+        <p>
+            For å sørge for et uniformt utseende på siden og å lette videre utvikling skal vi ha et javascript
+            som sørger for å inkludere den sammen menyen fra én fil inn på alle sidene. Dette betyr at vi bare
+            trenger å forandre en fil hvis vi skal forandre menyen.
+        </p>
+        <h3 id="dropdown">Drop-down meny</h3>
+        <p>
+            For å gjøre det lettere for brukeren å ha oversikt over hva det er som befinner seg på siden skal
+            ikke hele menyen vises til enhver tid, men bare den delen av menyen som brukeren eventuelt er
+            interessert i. Det er viktig å merke seg at det ikke er en menytype som passer best for alle
+            skjermstørrelser og enheter, så scriptet er ansvarlig for å velge ut hvilken menytype som passer
+            best for brukeren.
+        </p>
+        <h3 id="preload">Forhåndslasting av bilder</h3>
+        <p>
+            For å gjøre brukeropplevelsen så sømløs som mulig skal sidene forhåndslaste inn de bildene som det
+            kan være brukeren kommer til å se på siden. Dette betyr at etter at brukeren har vært inne på den
+            første siden, skal lastetiden for alle de andre sidene være drastisk redusert siden man ikke trenger
+            laste ned bildene, men bare kan hente det fra mellomlageret.
+        </p>
+        <h2 id="plan">Struktur, arbeidsfordeling og deadlines</h2>
+        <h3 id="mappestruktur">Mappestruktur</h3>
+        <p>
+            Dette er mappestrukturen vi skal benytte oss av. Alle .css-filer skal i samme mappe, alle .js-filer
+            skal i samme mappe, fontene for seg osv. .html-filene ligger strukturert slik det ville være naturlig
+            å bla seg gjennom nettsiden. Hele filstrukturen vil midlertidig befinne seg i en mappe "project" under
+            <a href="http://folk.ntnu.no/vemundms/webtek/">http://folk.ntnu.no/vemundms/webtek/</a>
+        </p>
+        project/
+        <ul>
+            <li>index.html</li>
+            <li>contact.html</li>
+            <li>about.html</li>
+            <li>heiser.html</li>
+            <li>menu.html</li>
+            <li>css/
+                <ul>
+                    <li>style.css</li>
+                    <li>bootstrap.css</li>
+                </ul>
+            </li>
+            <li>js/
+                <ul>
+                    <li>elevator.js</li>
+                    <li>menu.js</li>
+                    <li>header.js</li>
+                    <li>footer.js</li>
+                    <li>dropdrown.js</li>
+                    <li>preload.js</li>
+                </ul>
+            </li>
+            <li>images/
+            <ul>
+                    <li>p15.jpg</li>
+                    <li>kontakt.jpg</li>
+                    <li>about.html</li>
+                    <li>online.jpg</li>
+                    <li>abakus.jpg</li>
+                    <li>linjeforeninger.jpg</li>
+                    <li>k.jpg</li>
+                    <li>1.jpg</li>
+                    <li>2.jpg</li>
+                    <li>3.jpg</li>
+                    <li>4.jpg</li>
+                    <li>5.jpg</li>
+                    <li>etasjer.jpg</li>
+                    <li>heiser.jpg</li>
+                </ul>
+            </li>
+            <li>fonts/
+                <ul>
+                    <li>raleway.otf</li>
+                </ul>
+            </li>
+            <li>buttons/
+                <ul>
+                    <li>hamburger.png</li>
+                </ul>
+            </li>
+            <li>linjeforeninger/
+                <ul>
+                    <li>index.html</li>
+                    <li>abakus.html</li>
+                    <li>online.html</li>
+                </ul>
+            </li>
+            <li>etasjer/
+                <ul>
+                    <li>index.html</li>
+                    <li>k.html</li>
+                    <li>1.html</li>
+                    <li>2.html</li>
+                    <li>3.html</li>
+                    <li>4.html</li>
+                    <li>5.html</li>
+                </ul>
+            </li>
+        </ul>
+        <h3 id="arbeidsfordeling">Arbeidsfordeling og frister</h3>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Filnavn</th>
+                    <th>Beskrivelse</th>
+                    <th>Ansvarlig</th>
+                    <th>Frist</th>
+                </tr>
+                <tr>
+                    <td>Mappestruktur, <br/>bootstrap.css, <br/>raleway.otf</td>
+                    <td>Etablere riktig mappestruktur, og laste ned eksterne ressurser</td>
+                    <td>Vemund</td>
+                    <td>14.10.2015</td>
+                </tr>
+                <tr>
+                    <td>Samtlige bilder i images/</td>
+                    <td>Alle bilder må anskaffes, enten ved å hente fra relevante, lovlige ressurser, eller ved å ta
+                        egne bilder. <br/>Bildene må eventuelt redigeres slik at de holder en høy standard.</td>
+                    <td>Camilla</td>
+                    <td>20.10.2015</td>
+                </tr>
+                <tr>
+                    <td>hamburger.png</td>
+                    <td>Lage en vektorfil av hamburgerknappen. Legg en transparent .png i riktig mappe.</td>
+                    <td>Agnete</td>
+                    <td>20.10.2015</td>
+                </tr>
+                <tr>
+                    <td>index.html <br/> contact.html <br/> about.html</td>
+                    <td>Lage forside, kontakt oss og "Om P15"</td>
+                    <td>Vemund</td>
+                    <td>20.10.2015</td>
+                </tr>
+                <tr>
+                    <td>menu.js, <br/>header.js, <br/>footer.js</td>
+                    <td>Lage script for lasting av header, many og footer til hver side</td>
+                    <td>Emil</td>
+                    <td>20.10.2015</td>
+                </tr>
+                <tr>
+                    <td>etasjer/index.html<br/>k.html<br/>1.html<br/>2.html</td>
+                    <td>Lage enkelte sider under etasjer/</td>
+                    <td>Agnete</td>
+                    <td>27.10.2015</td>
+                </tr>
+                <tr>
+                    <td>3.html<br/>4.html<br/>5.html<br/>heiser.html</td>
+                    <td>Lage resterende sider under etasjer/ og siden om heiser </td>
+                    <td>Vemund</td>
+                    <td>27.10.2015</td>
+                </tr>
+                <tr>
+                    <td>linjeforeninger/index.html<br/>abakus.html<br/>online.html</td>
+                    <td>Lage samtlige sider under linjeforeninger/</td>
+                    <td>Camilla</td>
+                    <td>27.10.2015</td>
+                </tr>
+                <tr>
+                    <td>elevator.js,<br/>dropdown.js,<br/>preload.js</td>
+                    <td>Lage scripts for heisanimasjon ved første besøk til siden, script for menyer som er tilpasset
+                        <br/>skjermstørrelse og script for å forhåndslaste bilder</td>
+                    <td>Emil</td>
+                    <td>27.10.2015</td>
+                </tr>
+                <tr>
+                    <td>style.css</td>
+                    <td>Siste endringer på style.css. Denne vil bli modifisert fortløpende mens en skriver
+                        .html-filene til siden.</td>
+                    <td>Agnete</td>
+                    <td>29.10.2015</td>
+                </tr>
+                <tr>
+                    <td>Testing og bugfixes</td>
+                    <td>Samtlige er ansvarlige for å teste sine egne filer for feil, inkludert responsivitet,
+                        ulike nettlesere og utseende</td>
+                    <td>Agnete, Camilla, Emil, Vemund</td>
+                    <td>05.11.2015</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
