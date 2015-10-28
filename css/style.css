@@ -12,12 +12,16 @@ p {
 	font-weight: 300;
 }
 
+header {
+	background-color: #274a97;
+}
+
 footer {
 	background-color: #959dcc;
 }
 
-menu {
-	background-color: #274a97;
+#dropdown {
+	background-color: #4d7ec0;
 }
 
 .text {
