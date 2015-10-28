@@ -14,6 +14,10 @@ p {
 
 header {
 	background-color: #274a97;
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-weight: 300;
+	color: white;
+	text-transform: uppercase;
 }
 
 footer {
