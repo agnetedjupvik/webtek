@@ -1,0 +1,37 @@
+h1 {
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-weight: 200;
+}
+
+body {
+	background-color: #e6eaf7;
+}
+
+p {
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-weight: 300;
+}
+
+header {
+	background-color: #274a97;
+}
+
+footer {
+	background-color: #959dcc;
+}
+
+#dropdown {
+	background-color: #4d7ec0;
+}
+
+.text {
+	width: 50%;
+	float: left;
+	padding-right: 5px;
+}
+
+
+.photo img {
+	width: 48%;
+	display: inline;
+}
