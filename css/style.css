@@ -1,0 +1,21 @@
+h1 {
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-weight: 200;
+}
+
+body {
+	background-color: #e6eaf7;
+}
+
+p {
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-weight: 300;
+}
+
+footer {
+	background-color: #959dcc;
+}
+
+menu {
+	background-color: #274a97;
+}
