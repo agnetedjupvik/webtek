@@ -19,3 +19,15 @@ footer {
 menu {
 	background-color: #274a97;
 }
+
+.text {
+	width: 50%;
+	float: left;
+	padding-right: 5px;
+}
+
+
+.photo img {
+	width: 48%;
+	display: inline;
+}
