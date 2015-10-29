@@ -1,5 +1,7 @@
 /*
- * Loads the document in url and append it to the given DOM element
+ * Usage: include(element, url)
+ *
+ * Append the document found at URL to the DOM element given.
  */
 var include = function (element, url) {
   "use strict";

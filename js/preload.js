@@ -1,10 +1,18 @@
+/*
+ * Usage: preloader.load(URL or Array of URLs)
+ *
+ * The preloader will preload the given images so that after the first visit,
+ * pages will load faster as the browsers have (hopefully) cached the images.
+ */
 var preloader = (function () {
   "use strict";
 
   var document_loaded = false,
+      /* exports contains the functions to be exposed for use */
       exports = {},
       images = [];
 
+  /* This function will add the image to the queue to be loaded. */
   exports.load = function(url) {
     var i,
         img;
@@ -28,6 +36,10 @@ var preloader = (function () {
     }
   };
 
+  /*
+   * We don't want to slow down the initial page load, so we don't start
+   * preloading images until after the page has fully loaded.
+   */
   window.addEventListener("load", function () {
     var i,
         img;
