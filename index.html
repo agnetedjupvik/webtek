@@ -5,11 +5,11 @@
     <title>Hjem</title>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/include.js"></script>
 </head>
 <body>
-<header>
-    Meny and stuff goes here
-</header>
+<div id="wrapper">
+<div id="menucontainer"></div>
 <h1>Velkommen til P15!</h1>
 <div class="text">
     <p>
@@ -24,6 +24,11 @@
 <div class="photo">
     <img src="images/p15.jpg">
 </div>
-
+<div class="footerfixer"></div>
+</div>
+<script>
+  include(document.getElementById("menucontainer"), "menu.html");
+  include(document.getElementById("wrapper"), "footer.html");
+</script>
 </body>
 </html>

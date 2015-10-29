@@ -1,55 +1,119 @@
 h1 {
-	font-family: "Raleway", Helvetica, sans-serif;
-	font-weight: 200;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 200;
 }
 
 h3 {
-	font-family: "Raleway", Helvetica, sans-serif;
-	font-weight: 400;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 400;
 }
 
 li {
-	font-family: "Raleway", Helvetica, sans-serif;
-	font-weight: 300;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 300;
 }
 
 a {
-	color: black;
+    color: black;
 }
 
-body {
-	background-color: #e6eaf7;
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #e6eaf7;
 }
 
 p {
-	font-family: "Raleway", Helvetica, sans-serif;
-	font-weight: 300;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 300;
 }
 
 header {
-	background-color: #274a97;
-	font-family: "Raleway", Helvetica, sans-serif;
-	font-weight: 300;
-	color: white;
-	text-transform: uppercase;
+    background-color: #274a97;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    height: 50px;
+}
+
+header .brand {
+    float: left;
+    font-size: 32px;
+    margin-left: 50px;
+    line-height: 50px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header ul {
+    float: right;
+    margin: 0;
+    padding-right: 50px;
+}
+
+header ul li {
+    list-style-type: none;
+    float: left;
+}
+
+header ul li a {
+    display: block;
+    padding: 0 15px;
+    line-height: 50px;
 }
 
 footer {
-	background-color: #959dcc;
+    background-color: #959dcc;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
 }
 
-#dropdown {
-	background-color: #4d7ec0;
+footer ul {
+    margin: 0 auto;
+}
+
+footer ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 0 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+}
+
+#dropdown {
+    background-color: #4d7ec0;
 }
 
 .text {
-	width: 50%;
-	float: left;
-	padding-right: 5px;
+    width: 50%;
+    float: left;
+    padding-right: 5px;
 }
 
 
 .photo img {
-	width: 48%;
-	display: inline;
+    width: 48%;
+    display: inline;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Element to "fix" the footer to the bottom of the page */
+.footerfixer {
+    clear: both;
+    margin-bottom: 30px;
 }
