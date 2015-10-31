@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heisene</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/include.js"></script>
+    <script src="js/menu.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <div id="menucontainer"></div>
+    </header>
+    <h1>Heisene</h1>
+    <div class="text">
+        <p>
+            Her skal det være tekst om heisene
+        </p>
+    </div>
+    <div class="photo">
+        <img src="images/heiser.jpg">
+    </div>
+    <div class="footerfixer"></div>
+</div>
+<script>
+    include(document.getElementById("menucontainer"), "menu.html", menu);
+    include(document.getElementById("wrapper"), "footer.html");
+</script>
+</body>
+</html>

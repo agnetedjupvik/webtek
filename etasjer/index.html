@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <title>Etasjer</title>
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="js/include.js"></script>
-	<script src="js/menu.js"></script>
-<header> 
-	Meny and stuff goes here
-</header>
-
-<h1>Etasjer</h1>
-<div class="text">
-	<p>
-	På denne siden kan du komme deg videre til sidene om alle etasjene som er å finne på P15.
-	</p>
-</div>
-<div class="photo">
-	<img src="../images/etasjer.jpg">
-</div>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/include.js"></script>
+	<script src="../js/menu.js"></script>
 </head>
+<body>
+<div id="wrapper">
+	<header>
+		<div id="menucontainer"></div>
+	</header>
+	<h1>Etasjer</h1>
+	<div class="text">
+		<p>
+			På denne siden kan du komme deg videre til sidene om alle etasjene som er å finne på P15.
+		</p>
+	</div>
+	<div class="photo">
+		<img src="../images/etasjer.jpg">
+	</div>
+	<div class="footerfixer"></div>
+</div>
+<script>
+	include(document.getElementById("menucontainer"), "../menu.html", menu);
+	include(document.getElementById("wrapper"), "../footer.html");
+</script>
+</body>
