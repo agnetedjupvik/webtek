@@ -4,32 +4,43 @@
     <meta charset="UTF-8">
     <title>5. etasje</title>
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="js/include.js"></script>
-	<script src="js/menu.js"></script>
-<header> 
-	Meny and stuff goes here
-</header>
-
-<h1>5. etasje</h1>
-<div class="text">
-	<p>
-		Femte etasje er en litt annerledes etasje enn de andre. Her er det mange adgangsbegrensede saler, og noen av dem er forbeholdt masterstudenter ved IDI, altså informatikk og datateknologi. Derfor anbefales det ikke for studenter utenfor dette å forsøke å komme seg inn på disse rommene.
-	</p>
-	<p>Det finnes én tavle i femte etasje hvor man kan henge opp plakater.</p>
-
-	<h3>Printere</h3>
-	<p>
-		I denne etasjen finnes printeren som anses på den beste på P15. Den ligger i en av salene som er forbeholdt IDI-studenter, men denne er mer moderne enn de andre på P15. Den kan både skanne, kopiere og printe farger. For å installere denne printeren kan du følge guiden for <a href="https://innsida.ntnu.no/wiki/-/wiki/Norsk/Installere+NTNU-skriver+i+Windows">Windows</a> eller <a href="https://innsida.ntnu.no/wiki/-/wiki/Norsk/Legge+til+skriver+i+Mac+OSX">Mac OS X</a>.
-	</p>
-
-	<h3>Datasaler</h3>
-	<p>
-		Det finnes fire datasaler i femte etasje. Disse er helt nyoppussede, og har derfor nyere utstyr enn de andre salene på P15. På den innerste salen til høyre finner du kraftigere datamaskiner enn de øvrige tynnklientene. Også i denne etasjen brukes noen av rommene til studasstimer i blant, men de blir ikke stengt for flere studenter av den grunn.
-	</p>
-
-</div>
-<div class="photo">
-	<img src="../images/5.jpg">
-</div>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/include.js"></script>
+	<script src="../js/menu.js"></script>
 </head>
+<body>
+<div id="wrapper">
+	<header>
+		<div id="menucontainer"></div>
+	</header>
+
+	<h1>5. etasje</h1>
+
+	<div class="text">
+		<p>
+			Femte etasje er en litt annerledes etasje enn de andre. Her er det mange adgangsbegrensede saler, og noen av dem er forbeholdt masterstudenter ved IDI, altså informatikk og datateknologi. Derfor anbefales det ikke for studenter utenfor dette å forsøke å komme seg inn på disse rommene.
+		</p>
+		<p>Det finnes én tavle i femte etasje hvor man kan henge opp plakater.</p>
+
+		<h3>Printere</h3>
+		<p>
+			I denne etasjen finnes printeren som anses på den beste på P15. Den ligger i en av salene som er forbeholdt IDI-studenter, men denne er mer moderne enn de andre på P15. Den kan både skanne, kopiere og printe farger. For å installere denne printeren kan du følge guiden for <a href="https://innsida.ntnu.no/wiki/-/wiki/Norsk/Installere+NTNU-skriver+i+Windows">Windows</a> eller <a href="https://innsida.ntnu.no/wiki/-/wiki/Norsk/Legge+til+skriver+i+Mac+OSX">Mac OS X</a>.
+		</p>
+
+		<h3>Datasaler</h3>
+		<p>
+			Det finnes fire datasaler i femte etasje. Disse er helt nyoppussede, og har derfor nyere utstyr enn de andre salene på P15. På den innerste salen til høyre finner du kraftigere datamaskiner enn de øvrige tynnklientene. Også i denne etasjen brukes noen av rommene til studasstimer i blant, men de blir ikke stengt for flere studenter av den grunn.
+		</p>
+	</div>
+
+	<div class="photo">
+		<img src="../images/5.jpg">
+	</div>
+
+	<div class="footerfixer"></div>
+</div>
+<script>
+	include(document.getElementById("menucontainer"), "../menu.html", menu);
+	include(document.getElementById("wrapper"), "../footer.html");
+</script>
+</body>

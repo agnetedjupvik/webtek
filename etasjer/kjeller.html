@@ -9,43 +9,40 @@
 	<script src="../js/menu.js"></script>
 </head>
 <body>
-	<div id="wrapper">
-	<div id="menucontainer"></div>
-
+<div id="wrapper">
 	<header>
-		Meny and stuff goes here
+		<div id="menucontainer"></div>
 	</header>
+	<h1>Kjelleren</h1>
+	<div class="text">
+		<p>
+			I kjelleren er det mange ting som kanskje ikke er så veldig tilgjengelig for studentene. Det er for eksempel her resirkuleringsområdet til P15 er, og vaskepersonellet holder også til her med sitt utstyr.
+		</p>
+		<h3>Boden</h3>
+		<p>
+			I kjelleren finner du boden til <a href="../linjeforeninger/online.html">Linjeforeningen Online</a>. Her oppbevarer Online sitt utstyr. Her kan du blant annet finne:
+		</p>
+		<ul>
+			<li>Lager av kioskvarer</li>
+			<li>Fotoutstyr</li>
+			<li>Gamle utgaver av Offline</li>
+			<li>Onlines hettegensere</li>
+		</ul>
+		<p>Boden er låst med en nøkkel som kun komitémedlemmer i Online har tilgang til. Derfor må du ta kontakt med noen i en komité for å få tilgang til boden.</p>
 
-<h1>Kjelleren</h1>
-<div class="text">
-	<p>
-		I kjelleren er det mange ting som kanskje ikke er så veldig tilgjengelig for studentene. Det er for eksempel her resirkuleringsområdet til P15 er, og vaskepersonellet holder også til her med sitt utstyr.
-	</p>
-	<h3>Boden</h3>
-	<p>
-		I kjelleren finner du boden til <a href="../linjeforeninger/online.html">Linjeforeningen Online</a>. Her oppbevarer Online sitt utstyr. Her kan du blant annet finne:
-	</p>
-	<ul>
-		<li>Lager av kioskvarer</li>
-		<li>Fotoutstyr</li>
-		<li>Gamle utgaver av Offline</li>
-		<li>Onlines hettegensere</li>
-	</ul>
-	<p>Boden er låst med en nøkkel som kun komitémedlemmer i Online har tilgang til. Derfor må du ta kontakt med noen i en komité for å få tilgang til boden.</p>
-
-	<h3>Garderoben</h3>
-	<p>
-		I kjelleren finner du også garderoben på P15. Her finner du både vask og dusj, og dette kan være en kjekk ting å ha dersom du har hatt en litt ekstra lang og svett dag på lesesal.
-	</p>
-
+		<h3>Garderoben</h3>
+		<p>
+			I kjelleren finner du også garderoben på P15. Her finner du både vask og dusj, og dette kan være en kjekk ting å ha dersom du har hatt en litt ekstra lang og svett dag på lesesal.
+		</p>
+	</div>
+	<div class="photo">
+		<img src="../images/k.jpg">
+	</div>
+	<div class="footerfixer"></div>
 </div>
-<div class="photo">
-	<img src="../images/k.jpg">
-</div>
-</div>
-	<script>
-		include(document.getElementById("menucontainer"), "menu.html", menu);
-		include(document.getElementById("wrapper"), "footer.html");
-	</script>
+<script>
+	include(document.getElementById("menucontainer"), "../menu.html", menu);
+	include(document.getElementById("wrapper"), "../footer.html");
+</script>
 </body>
 </html>
