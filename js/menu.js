@@ -43,12 +43,14 @@ var menu = (function(window, document) {
         });
 
         /* If the user scrolls to view the content, hide the dropdowns */
-        document.addEventListener("scroll", function() {
+        document.addEventListener("touchmove", function(e) {
           var i,
               activeDropdowns = document.querySelectorAll(".dropdown.active");
 
           for (i = 0; i < activeDropdowns.length; i++) {
-            activeDropdowns[i].classList.remove("active");
+            if (!activeDropdowns[i].contains(e.target)) {
+              activeDropdowns[i].classList.remove("active");
+            }
           }
         });
       }
