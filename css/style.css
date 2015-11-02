@@ -1,3 +1,8 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
 h1 {
     font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 200;
@@ -173,6 +178,18 @@ header.mobile .togglebutton {
 
 header.mobile .togglebutton.close {
     right: 185px;
+}
+
+.title {
+    position: relative;
+    font-size: 48px;
+    font-weight: 200;
+    padding: 7px;
+    padding-left: 10px;
+}
+
+.content {
+    margin-left: 1%;
 }
 
 footer {
