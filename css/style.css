@@ -69,7 +69,7 @@ header ul li a {
     color: #cdcdcd;
 }
 
-header ul li a:hover, header ul li a:focus, header ul li a:active {
+header ul li a:hover, header ul li a:focus, header ul li a:active, header ul li.active a {
     color: #fff;
 }
 
@@ -85,7 +85,7 @@ header ul li a:hover, header ul li a:focus, header ul li a:active {
     display: none;
 }
 
-.dropdown.active {
+.dropdown.open {
     display: block;
 }
 
@@ -99,6 +99,80 @@ header ul li a:hover, header ul li a:focus, header ul li a:active {
 
 .dropdown li a:hover, .dropdown li a:focus, .dropdown li a:active {
     background: #3969A6;
+}
+
+header.mobile {
+    margin-bottom: 20px;
+}
+
+header.mobile > ul {
+    padding-top: 50px;
+    float: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #5282bf;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    z-index: 5;
+    text-align: center;
+}
+
+header.mobile > ul.open {
+    display: block;
+}
+
+header.mobile > ul > li {
+    float: none;
+    text-align: left;
+}
+
+#mobilemenu {
+    display: none;
+}
+
+header.mobile #mobilemenu {
+    display: block;
+}
+
+header.mobile #mobilemenu .dropdown {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 20px;
+    text-align: center;
+}
+
+header.mobile #mobilemenu .dropdown li {
+    display: inline;
+}
+
+header.mobile #mobilemenu .dropdown li a {
+    display: inline;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+header .togglebutton {
+    display: none;
+}
+
+header.mobile .togglebutton {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    border-bottom: 10px double white;
+    border-top: 3px solid white;
+    content: "";
+    height: 4px;
+    width: 30px;
+    z-index: 10;
+}
+
+header.mobile .togglebutton.close {
+    right: 185px;
 }
 
 footer {
@@ -135,6 +209,10 @@ footer ul li a {
     padding-right: 5px;
 }
 
+.mobile .photo img {
+    display: block;
+    width: 80%;
+}
 
 .photo img {
     width: 48%;
@@ -150,4 +228,8 @@ footer ul li a {
 .footerfixer {
     clear: both;
     margin-bottom: 30px;
+}
+
+.hidden {
+    display: none;
 }
