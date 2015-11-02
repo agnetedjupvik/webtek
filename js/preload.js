@@ -60,3 +60,18 @@ var preloader = (function () {
 
   return exports;
 } ());
+
+preloader.load([
+    "http://folk.ntnu.no/vemundms/webtek/project/images/p15.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/about.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/k.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/1.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/2.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/3.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/4.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/5.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/heiser.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/abakus.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/online.jpg",
+    "http://folk.ntnu.no/vemundms/webtek/project/images/kontakt.jpg"
+]);
