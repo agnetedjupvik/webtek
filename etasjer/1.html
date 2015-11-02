@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>1. etasje</title>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-<header> 
-	Meny and stuff goes here
-</header>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/include.js"></script>
+	<script src="../js/menu.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<div id="menucontainer"></div>
+	</header>
 
-<div class="content">
 	<h1>1. etasje</h1>
 	<div class="text">
 		<p>
-		Første etasje er den etasjen hvor du kommer inn på P15. Her finner du stativer for linjeforeningsmagasinene Offline og readme, samt inngang til trappeoppgangen og <a href="../heiser.html">heisene</a>.
+			Første etasje er den etasjen hvor du kommer inn på P15. Her finner du stativer for linjeforeningsmagasinene Offline og readme, samt inngang til trappeoppgangen og <a href="../heiser.html">heisene</a>.
 		</p>
 
 		<h3>Tavler</h3>
@@ -24,5 +28,11 @@
 	<div class="photo">
 		<img src="../images/1.jpg">
 	</div>
+
+	<div class="footerfixer"></div>
 </div>
-</head>
+<script>
+	include(document.getElementById("menucontainer"), "../menu.html", menu);
+	include(document.getElementById("wrapper"), "../footer.html");
+</script>
+</body>

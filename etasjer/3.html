@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>3. etasje</title>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-<header> 
-	Meny and stuff goes here
-</header>
-
-<div class="content">
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/include.js"></script>
+	<script src="../js/menu.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<div id="menucontainer"></div>
+	</header>
 	<h1>3. etasje</h1>
+
 	<div class="text">
 		<p>
 		3. etasje er en etasje med mye aktivitet. Her finner du blant annet kontoret til <a href="../linjeforeninger/online.html">Linjeforeningen Online</a> og fire datasaler med tynnklienter. Det er også to tavler hvor det kan henges plakater.
@@ -30,10 +34,16 @@
 		<p>
 			I tredje etasje finnes det en rekke med låsbare skap. Disse skapene kan låses med NTNU-kortet ditt(eller hvilket som helst RFID-kort). Når du har låst skapet står det låst i 28 timer før det automatisk åpner seg igjen, så hvis du ønsker å beholde sakene dine må du låse det på nytt hver dag.
 		</p>
-
 	</div>
+
 	<div class="photo">
 		<img src="../images/3.jpg">
 	</div>
+
+	<div class="footerfixer"></div>
 </div>
-</head>
+<script>
+	include(document.getElementById("menucontainer"), "../menu.html", menu);
+	include(document.getElementById("wrapper"), "../footer.html");
+</script>
+</body>

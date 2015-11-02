@@ -62,6 +62,7 @@ header ul {
 }
 
 header ul li {
+    position: relative;
     list-style-type: none;
     float: left;
 }
@@ -70,6 +71,39 @@ header ul li a {
     display: block;
     padding: 0 15px;
     line-height: 50px;
+    color: #cdcdcd;
+}
+
+header ul li a:hover, header ul li a:focus, header ul li a:active {
+    color: #fff;
+}
+
+.dropdown {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    background: #5282bf;
+    width: 100%;
+    min-width: 160px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    display: none;
+}
+
+.dropdown.active {
+    display: block;
+}
+
+.dropdown li {
+    float: none;
+}
+
+.dropdown li a {
+    color: white;
+}
+
+.dropdown li a:hover, .dropdown li a:focus, .dropdown li a:active {
+    background: #3969A6;
 }
 
 .title {

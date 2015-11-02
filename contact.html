@@ -3,34 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Kontakt</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/include.js"></script>
+    <script src="js/menu.js"></script>
 </head>
 <body>
-<header>
+<div id="wrapper">
+    <header>
+        <div id="menucontainer"></div>
+    </header>
     <h1>Kontakt</h1>
-</header>
-<section>
-    <div class="col-sm-6">
-        <h2>Institutt for datateknikk og informasjonsvitenskap (IDI)</h2>
-        <p>
-            Epost: <a href="mailto:idi@idi.ntnu.no">idi@idi.ntnu.no</a><br/>
-            Nettside: <a href="http://www.ntnu.no/idi">http://www.ntnu.no/idi</a>
-        </p>
-        <h2>Linjeforeningen Abakus</h2>
-        <p>
-            Epost: <a href="mailto:abakus@abakus.no">abakus@abakus.no</a><br/>
-            Nettside: <a href="https://abakus.no/">https://abakus.no/</a>
-        </p>
-        <h2>Linjeforeningen Online</h2>
-        <p>
-            Epost: <a href="mailto:kontakt@online.ntnu.no">kontakt@online.ntnu.no</a><br/>
-            Nettside: <a href="https://online.ntnu.no/">https://online.ntnu.no/</a>
-        </p>
-    </div>
-    <div class="col-sm-6">
-        <img class="img-responsive" src="images/kontakt.jpg">
-    </div>
-</section>
-
+    <section>
+        <div class="text">
+            <p>
+                Om det skulle være noe du lurer på eller noe som ikke ikke stemmer på våre nettsider, kan du ta
+                kontakt med den organisasjonen det angår ved hjelp av disse lenkene.
+            </p>
+            <h2>Institutt for datateknikk og informasjonsvitenskap (IDI)</h2>
+            <p>
+                Epost: <a href="mailto:idi@idi.ntnu.no">idi@idi.ntnu.no</a><br/>
+                Nettside: <a href="http://www.ntnu.no/idi">http://www.ntnu.no/idi</a>
+            </p>
+            <h2>Linjeforeningen Abakus</h2>
+            <p>
+                Epost: <a href="mailto:abakus@abakus.no">abakus@abakus.no</a><br/>
+                Nettside: <a href="https://abakus.no/">https://abakus.no/</a>
+            </p>
+            <h2>Linjeforeningen Online</h2>
+            <p>
+                Epost: <a href="mailto:kontakt@online.ntnu.no">kontakt@online.ntnu.no</a><br/>
+                Nettside: <a href="https://online.ntnu.no/">https://online.ntnu.no/</a>
+            </p>
+        </div>
+        <div class="photo">
+            <img src="images/kontakt.jpg">
+        </div>
+    </section>
+    <div class="footerfixer"></div>
+</div>
+<script>
+    include(document.getElementById("menucontainer"), "menu.html", menu);
+    include(document.getElementById("wrapper"), "footer.html");
+</script>
 </body>
 </html>

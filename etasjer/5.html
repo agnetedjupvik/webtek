@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>5. etasje</title>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-<header> 
-	Meny and stuff goes here
-</header>
-
-<div class="content">
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/include.js"></script>
+	<script src="../js/menu.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<div id="menucontainer"></div>
+	</header>
 	<h1>5. etasje</h1>
+
 	<div class="text">
 		<p>
 			Femte etasje er en litt annerledes etasje enn de andre. Her er det mange adgangsbegrensede saler, og noen av dem er forbeholdt masterstudenter ved IDI, altså informatikk og datateknologi. Derfor anbefales det ikke for studenter utenfor dette å forsøke å komme seg inn på disse rommene.
@@ -24,12 +28,20 @@
 
 		<h3>Datasaler</h3>
 		<p>
-			Det finnes fire datasaler i femte etasje. Disse er helt nyoppussede, og har derfor nyere utstyr enn de andre salene på P15. På den innerste salen til høyre finner du kraftigere datamaskiner enn de øvrige tynnklientene. Også i denne etasjen brukes noen av rommene til studasstimer i blant, men de blir ikke stengt for flere studenter av den grunn.
+			Det finnes fire datasaler i femte etasje. Disse er helt nyoppussede, og har derfor nyere utstyr enn de
+			andre salene på P15. På den innerste salen til høyre finner du kraftigere datamaskiner enn de øvrige
+			tynnklientene. Også i denne etasjen brukes noen av rommene til studasstimer i blant, men de blir ikke stengt for flere studenter av den grunn.
 		</p>
-
 	</div>
+
 	<div class="photo">
 		<img src="../images/5.jpg">
 	</div>
+
+	<div class="footerfixer"></div>
 </div>
-</head>
+<script>
+	include(document.getElementById("menucontainer"), "../menu.html", menu);
+	include(document.getElementById("wrapper"), "../footer.html");
+</script>
+</body>
