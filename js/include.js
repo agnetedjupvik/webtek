@@ -1,10 +1,12 @@
 /*
-FILE NAME: js/include.js
-WRITTEN BY: Agnete Djupvik, Camilla Tran, Emil Taylor Bye & Vemund Santi
-WHEN: October 2015
-PURPOSE: Usage: include(element, url)
-Append the document found at URL to the DOM element given.
+ * FILE NAME: js/include.js
+ * WRITTEN BY: Agnete Djupvik, Camilla Tran, Emil Taylor Bye & Vemund Santi
+ * WHEN: October 2015
+ * PURPOSE: Usage: include(element, url, optional callback)
+ * Append the document found at URL to the DOM element given. If a callback is
+ * supplied, it will be called after the URL was added to the DOM.
  */
+
 var include = function (element, url, callback) {
   "use strict";
 
