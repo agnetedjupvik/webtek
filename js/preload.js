@@ -1,4 +1,12 @@
 /*
+ * FILE NAME: preload.js
+ * WRITTEN BY: Agnete Djupvik, Camilla Tran, Emil Taylor Bye & Vemund Santi
+ * WHEN: October 2015
+ * PURPOSE: Preload images so that all the images used on the sites are cached
+ * by the browser.
+*/
+
+/*
  * Usage: preloader.load(URL or Array of URLs)
  *
  * The preloader will preload the given images so that after the first visit,
@@ -7,16 +15,19 @@
 var preloader = (function () {
   "use strict";
 
-  var document_loaded = false,
-      /* exports contains the functions to be exposed for use */
-      exports = {},
-      images = [];
+  var document_loaded = false;
+  /* exports contains the functions to be exposed for use */
+  var exports = {};
+  /* An array containing all the image elements */
+  var images = [];
 
   /* This function will add the image to the queue to be loaded. */
   exports.load = function(url) {
-    var i,
-        img;
+    var i;
+    /* img is used as a temprary variable when creating new array element */
+    var img;
 
+    /* If we receive an array, we call load with each array element. */
     if (url instanceof Array) {
       for (i = 0; i < url.length; i++) {
         exports.load(url[i]);
@@ -30,6 +41,10 @@ var preloader = (function () {
     if (!document_loaded) {
       images.push(url);
     } else {
+      /*
+       * This will create a new image-element and load it, putting it in the
+       * brower's cache.
+       */
       img = new Image();
       img.src = url;
       images.push(img);
@@ -41,8 +56,8 @@ var preloader = (function () {
    * preloading images until after the page has fully loaded.
    */
   window.addEventListener("load", function () {
-    var i,
-        img;
+    var i;
+    var img;
 
     document_loaded = true;
 
