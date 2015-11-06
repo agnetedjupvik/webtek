@@ -1,20 +1,37 @@
 /*
+ * FILE NAME: menu.js
+ * WRITTEN BY: Agnete Djupvik, Camilla Tran, Emil Taylor Bye & Vemund Santi
+ * WHEN: October 2015
+ * PURPOSE: Makes the menu interactive, handles dropdown-events and the mobile
+ * menu.
+*/
+
+/*
  * Some events fire rapidly, but we will probably not want an event for every
  * callback that is fired. This function will register a throttled event
  * handler for the given (window) event.
+ *
+ * Usage: registerThrottledEvent(event, callback)
  */
 var registerThrottledEvent = function(eventString, callback) {
+  /*
+   * Whether the callback has been fired since the last time the callback was
+   * executed.
+   */
   var isEventFired = false;
-  var callbackFunction = function(e) {
-    callback();
-
-    isEventFired = false;
-  };
 
   window.addEventListener(eventString, function(e) {
+    /*
+     * If we haven't called the callback since last time this event was fired,
+     * just ignore the event.
+     */
     if (!isEventFired) {
       isEventFired = true;
 
+      /*
+       * requestAnimationFrame asks the browser to execute the given function
+       * before the next time the page is redrawn.
+       */
       window.requestAnimationFrame(function() {
         callback(e);
 
@@ -24,18 +41,36 @@ var registerThrottledEvent = function(eventString, callback) {
   });
 };
 
+/*
+ * This function will bind all the events for the menu with the proper
+ * callbacks.
+ *
+ * Usage: menu() - Only call this once per page.
+ */
 var menu = function() {
+  /* If the page width is less than 992 pixels, we use the mobile menu. */
   var isMobile = window.innerWidth <= 992;
+
+  /* The object resposible for handling events for the full menu */
   var fullMenu = (function() {
+    /* This function handles click events for the dropdowns on touch screens. */
     var touchDropdownClickCallback = function(e) {
       e.preventDefault();
       this.parentNode.getElementsByClassName("dropdown")[0].classList.toggle("open");
     };
 
+    /*
+     * If the user double clicks a dropdown menu, we want to go to the page
+     * that link points to.
+     */
     var touchDropdownDblClickCallback = function() {
       window.location = this.href;
     };
 
+    /*
+     * If the user clicks anywhere on the page that's not the open dropdown
+     * menu, we want to close the dropdown menu.
+     */
     var touchGlobalClickCallback = function(e) {
       var i;
       var openDropdowns = document.querySelectorAll(".dropdown.open");
@@ -47,6 +82,10 @@ var menu = function() {
       }
     };
 
+    /*
+     * If the user scrolls the page while a dropdown menu is open, we close the
+     * dropdown menu unless they touched the dropdown menu while scrolling.
+     */
     var touchScrollCallback = function(e) {
       var i;
       var openDropdowns = document.querySelectorAll(".dropdown.open");
@@ -58,10 +97,19 @@ var menu = function() {
       }
     }
 
+    /* When the user hovers over a dropdown menu, we want to display it. */
     var dropdownMouseoverCallback = function() {
       this.getElementsByClassName("dropdown")[0].classList.add("open");
     };
 
+    /*
+     * When the mouse leaves the dropdown menu, we want to wait a little while
+     * and then check whether the mouse still is away from the dropdown menu,
+     * and close it if that's the case.
+     *
+     * We need to use bind for the callback given to setTimeout as this would
+     * otherwise point to window.
+     */
     var dropdownMouseleaveCallback = function() {
       var mouseoutHandler = function() {
         if (this.parentNode.querySelector(":hover") !== this) {
@@ -69,24 +117,21 @@ var menu = function() {
         }
       }.bind(this);
 
-      /*
-       * Wait a little time to let the user regret closing the dropdown,
-       * and then close it if the mouse is not hovering the list.
-       *
-       * We need to use the function we've called bind on (above), otherwise
-       * "this" would point to the window object and not the list we want to
-       * close.
-       */
       window.setTimeout(mouseoutHandler, 200);
     };
 
     /*
-     * If we think the user is on a touch device. Code copied from:
+     * Detect whether we are displaying on a touch screen. Line copied from:
      * https://github.com/Modernizr/Modernizr/blob/eac743c52474609e457bf9bdf6fd114ea14ebe2a/feature-detects/touchevents.js
      */
     var isTouch = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
 
+    /* The functions this object want to export for use by other programmers. */
     var exports = {
+      /*
+       * Whenever we want to start displaying the full menu (either on page
+       * load, or on screen resize)
+       */
       setUp: function() {
         var i;
         var elements = document.getElementsByClassName("dropdown");
@@ -125,8 +170,13 @@ var menu = function() {
           }
         }
       },
+
+      /*
+       * If we are displaying the full menu, but the screen is resized so we
+       * want to display the mobile menu this function is called.
+       * It removes the callbacks set by setUp.
+       */
       tearDown: function() {
-        /* This function is basically setUp in reverse */
         var i;
         var elements = document.getElementsByClassName("dropdown");
 
@@ -149,14 +199,26 @@ var menu = function() {
 
     return exports;
   } ());
+
+  /* The object resposible for handling events for the mobile menu */
   var mobileMenu = (function() {
+    /*
+     * The function responsible for toggling the menu on clicking the menu
+     * toggle button.
+     */
     var toggleButtonClickCallback = function () {
       this.classList.toggle("close");
 
       document.querySelector("header > ul").classList.toggle("hidden");
     };
 
+    /* The functions this object want to export for use by other programmers. */
     var exports = {
+
+      /*
+       * Whenever we want to start displaying the mobile menu (either on page
+       * load, or on screen resize)
+       */
       setUp: function() {
         document.body.classList.add("mobile");
         document.getElementsByTagName("header")[0].classList.add("mobile");
@@ -164,6 +226,12 @@ var menu = function() {
         document.getElementsByClassName("togglebutton")[0].classList.remove("close");
         document.getElementsByClassName("togglebutton")[0].addEventListener("click", toggleButtonClickCallback);
       },
+
+      /*
+       * If we are displaying the mobile menu, but the screen is resized so we
+       * want to display the full menu this function is called.
+       * It removes the callbacks and classes set by setUp.
+       */
       tearDown: function() {
         document.body.classList.remove("mobile");
         document.getElementsByTagName("header")[0].classList.remove("mobile");
