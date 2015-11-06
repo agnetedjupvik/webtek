@@ -1,7 +1,9 @@
 /*
- * Usage: include(element, url)
- *
- * Append the document found at URL to the DOM element given.
+FILE NAME: js/include.js
+WRITTEN BY: Agnete Djupvik, Camilla Tran, Emil Taylor Bye & Vemund Santi
+WHEN: October 2015
+PURPOSE: Usage: include(element, url)
+Append the document found at URL to the DOM element given.
  */
 var include = function (element, url, callback) {
   "use strict";

@@ -1,3 +1,10 @@
+/*
+FILE NAME: js/elevator.js
+WRITTEN BY: Agnete Djupvik, Camilla Tran, Emil Taylor Bye & Vemund Santi
+WHEN: October 2015
+PURPOSE: Provide elevator animation
+*/
+
 (function() {
   /* We only want the users to see the elevator once per session */
   if (!window.sessionStorage.getItem('elevator_seen')) {
