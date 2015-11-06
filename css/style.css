@@ -6,6 +6,7 @@ html, body {
 h1 {
     font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 200;
+    padding-left: 10px;
 }
 
 h3 {
@@ -224,6 +225,7 @@ footer ul li a {
     width: 50%;
     float: left;
     padding-right: 5px;
+    padding-left: 10px;
 }
 
 .mobile .photo img {
