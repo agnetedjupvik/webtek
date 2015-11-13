@@ -165,7 +165,7 @@ header.mobile #mobilemenu .dropdown {
     position: absolute;
     top: 50px;
     left: 0;
-    height: 20px;
+    height: 40px;
     text-align: center;
 }
 
@@ -247,6 +247,11 @@ footer ul li a {
     z-index: 100;
 }
 
+#menuspacer {
+    margin-top: 20px;
+    display: none;
+}
+
 /* Element to "fix" the footer to the bottom of the page */
 .footerfixer {
     clear: both;
@@ -292,4 +297,10 @@ footer ul li a {
         max-width: 36px;
         max-height: 36px;
     }
+
+    #menuspacer {
+        margin-top: 20px;
+        display: block;
+    }
+
 }
