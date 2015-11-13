@@ -49,7 +49,7 @@ var registerThrottledEvent = function(eventString, callback) {
  */
 var menu = function() {
   /* If the page width is less than 992 pixels, we use the mobile menu. */
-  var isMobile = window.innerWidth <= 820;
+  var isMobile = window.innerWidth <= 860;
 
   /* The object resposible for handling events for the full menu */
   var fullMenu = (function() {
@@ -281,7 +281,7 @@ var menu = function() {
 
   /* Global event handlers */
   registerThrottledEvent("resize", function(e) {
-    var isResizedMobile = window.innerWidth <= 820;
+    var isResizedMobile = window.innerWidth <= 860;
 
     if (isMobile && !isResizedMobile) {
       /* The mobile menu was shown, but now we want to show the full menu. */
