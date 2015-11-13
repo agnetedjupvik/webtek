@@ -248,7 +248,6 @@ footer ul li a {
 }
 
 #menuspacer {
-    margin-top: 200px;
     display: none;
 }
 
@@ -299,7 +298,8 @@ footer ul li a {
     }
 
     #menuspacer {
-        margin-top: 20px;
+        margin-top: 200px;
+        margin-bottom: 200px;
         display: block;
     }
 
