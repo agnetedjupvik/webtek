@@ -302,4 +302,10 @@ footer ul li a {
         display: block;
     }
 
+    #foreningspacer {
+        margin-top: 30px;
+        text-align: center;
+        display: block;
+    }
+
 }
