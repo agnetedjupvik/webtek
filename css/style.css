@@ -210,16 +210,17 @@ footer {
 
 footer ul {
     margin: 0 auto;
+    padding: 0;
 }
 
 footer ul li {
     list-style-type: none;
     display: inline;
+    padding: 0 15px;
 }
 
 footer ul li a {
     text-decoration: none;
-    padding: 0 10px 0 10px;
 }
 
 #dropdown {
