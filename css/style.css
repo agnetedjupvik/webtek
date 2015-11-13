@@ -215,11 +215,11 @@ footer ul {
 footer ul li {
     list-style-type: none;
     display: inline;
-    padding: 0 10px;
 }
 
 footer ul li a {
     text-decoration: none;
+    padding: 0 10px 0 10px;
 }
 
 #dropdown {
@@ -227,20 +227,19 @@ footer ul li a {
 }
 
 .text {
-    width: 50%;
+    width: 47%;
     float: left;
-    padding-right: 5px;
-    padding-left: 10px;
-}
-
-.mobile .photo img {
-    display: block;
-    width: 80%;
+    padding-right: 1%;
+    padding-left: 2%;
+    padding-bottom: 40px;
 }
 
 .photo img {
-    width: 48%;
+    width: 47%;
     display: inline;
+    padding-right: 2%;
+    padding-left: 1%;
+    padding-bottom: 40px;
 }
 
 #wrapper {
@@ -274,6 +273,7 @@ footer ul li a {
         float: left;
         padding-right: 2%;
         padding-left: 2%;
+        padding-bottom: 2%;
     }
 
     .photo img {
@@ -282,6 +282,6 @@ footer ul li a {
         width: 96%;
         padding-right: 2%;
         padding-left: 2%;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
     }
 }
