@@ -119,7 +119,7 @@ header.mobile {
 header.mobile > ul {
     padding-top: 50px;
     float: none;
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
     height: 100%;
@@ -167,23 +167,6 @@ header.mobile #mobilemenu .dropdown li a {
 
 header .togglebutton {
     display: none;
-}
-
-header.mobile .togglebutton {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    border-bottom: 10px double white;
-    border-top: 3px solid white;
-    content: "";
-    height: 4px;
-    width: 30px;
-    z-index: 10;
-}
-
-header.mobile .togglebutton.close {
-    right: 185px;
 }
 
 .title {
@@ -285,4 +268,25 @@ footer ul li a {
         padding-left: 2%;
         padding-bottom: 40px;
     }
+    header .togglebutton {
+        display: block;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        right: 10px;
+        top: 8px;
+        z-index: 10;
+    }
+
+    header .togglebutton.close {
+        right: 160px;
+    }
+
+    header .togglebutton img {
+        max-width: 36px;
+        max-height: 36px;
+    }
+
+
+
 }
