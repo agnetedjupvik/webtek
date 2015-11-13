@@ -165,7 +165,6 @@ header.mobile #mobilemenu .dropdown {
     position: absolute;
     top: 50px;
     left: 0;
-    height: 40px;
     text-align: center;
 }
 
@@ -247,7 +246,7 @@ footer ul li a {
     z-index: 100;
 }
 
-#menuspacer {
+#etasjespacer {
     display: none;
 }
 
@@ -297,7 +296,7 @@ footer ul li a {
         max-height: 36px;
     }
 
-    #menuspacer {
+    #etasjespacer {
         margin-top: 50px;
         text-align: center;
         display: block;
