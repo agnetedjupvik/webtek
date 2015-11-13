@@ -171,7 +171,8 @@ header.mobile #mobilemenu .dropdown {
 
 header.mobile #mobilemenu .dropdown li {
     display: inline;
-    padding: 0 5px;
+    padding: 0;
+    margin: 0;
 }
 
 header.mobile #mobilemenu .dropdown li a {
