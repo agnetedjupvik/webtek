@@ -1,26 +1,28 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    background-color: #e6eaf7;
+}
+
+header, h1, h2, h3, li, a, p {
+    font-family: "Raleway", Helvetica, sans-serif;
 }
 
 h1 {
-    font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 200;
-    padding-left: 10px;
+    padding-left: 2%;
 }
 
 h2 {
-    font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 400;
 }
 
 h3 {
-    font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 400;
 }
 
 li {
-    font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 300;
 }
 
@@ -28,21 +30,13 @@ a {
     color: black;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #e6eaf7;
-}
-
 p {
-    font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 300;
+    margin: 0 auto 16px auto;
 }
 
 header {
     background-color: #274a97;
-    font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 300;
     color: white;
     text-transform: uppercase;
@@ -169,18 +163,6 @@ header .togglebutton {
     display: none;
 }
 
-.title {
-    position: relative;
-    font-size: 48px;
-    font-weight: 200;
-    padding: 7px;
-    padding-left: 10px;
-}
-
-.content {
-    margin-left: 1%;
-}
-
 footer {
     background-color: #959dcc;
     position: absolute;
@@ -215,7 +197,7 @@ footer ul li a {
     float: left;
     padding-right: 1%;
     padding-left: 2%;
-    padding-bottom: 40px;
+    padding-bottom: 3%;
 }
 
 .photo img {
@@ -223,7 +205,7 @@ footer ul li a {
     display: inline;
     padding-right: 2%;
     padding-left: 1%;
-    padding-bottom: 40px;
+    padding-bottom: 3%;
 }
 
 #wrapper {
@@ -251,23 +233,22 @@ footer ul li a {
 }
 
 
-@media (max-width: 992px){
+@media (max-width: 820px){
     .text{
         width: 96%;
         float: left;
-        padding-right: 2%;
         padding-left: 2%;
         padding-bottom: 2%;
     }
 
     .photo img {
         display:block;
-        margin:auto;
         width: 96%;
         padding-right: 2%;
         padding-left: 2%;
         padding-bottom: 40px;
     }
+
     header .togglebutton {
         display: block;
         position: absolute;
@@ -286,7 +267,4 @@ footer ul li a {
         max-width: 36px;
         max-height: 36px;
     }
-
-
-
 }
