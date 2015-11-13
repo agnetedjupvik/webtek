@@ -250,6 +250,10 @@ footer ul li a {
     display: none;
 }
 
+#foreningspacer {
+    display: none;
+}
+
 /* Element to "fix" the footer to the bottom of the page */
 .footerfixer {
     clear: both;
