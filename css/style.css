@@ -4,7 +4,7 @@ html, body {
     height: 100%;
     background-color: #e6eaf7;
 }
-
+/* Raleway will be used everywhere */
 header, h1, h2, h3, li, a, p {
     font-family: "Raleway", Helvetica, sans-serif;
 }
@@ -35,6 +35,9 @@ p {
     margin: 0 auto 16px auto;
 }
 
+
+/* Styling header to display logo and menu correctly.
+See bottom of document for specific rules for small screens */
 header {
     background-color: #274a97;
     font-weight: 300;
@@ -43,6 +46,31 @@ header {
     height: 50px;
 }
 
+header a {
+color: white;
+text-decoration: none;
+}
+
+header ul {
+float: right;
+margin: 0;
+padding-right: 50px;
+}
+
+header ul li {
+position: relative;
+list-style-type: none;
+float: left;
+}
+
+header ul li a {
+display: block;
+padding: 0 15px;
+line-height: 50px;
+color: #cdcdcd;
+}
+
+/* Logo */
 header .brand {
     float: left;
     font-size: 32px;
@@ -50,32 +78,17 @@ header .brand {
     line-height: 50px;
 }
 
-header a {
-    color: white;
-    text-decoration: none;
-}
-
-header ul {
-    float: right;
-    margin: 0;
-    padding-right: 50px;
-}
-
-header ul li {
-    position: relative;
-    list-style-type: none;
-    float: left;
-}
-
-header ul li a {
-    display: block;
-    padding: 0 15px;
-    line-height: 50px;
-    color: #cdcdcd;
-}
-
-header ul li a:hover, header ul li a:focus, header ul li a:active, header ul li.active a {
+/* Light up when hovering and other type of focus */
+header ul li a:hover,
+header ul li a:focus,
+header ul li a:active,
+header ul li.active a {
     color: #fff;
+}
+
+/* Drop-down menu on large screens */
+#dropdown {
+    background-color: #4d7ec0;
 }
 
 .dropdown {
@@ -90,10 +103,6 @@ header ul li a:hover, header ul li a:focus, header ul li a:active, header ul li.
     display: none;
 }
 
-.dropdown.open {
-    display: block;
-}
-
 .dropdown li {
     float: none;
 }
@@ -102,10 +111,20 @@ header ul li a:hover, header ul li a:focus, header ul li a:active, header ul li.
     color: white;
 }
 
-.dropdown li a:hover, .dropdown li a:focus, .dropdown li a:active {
+/* Light up when hovering and other type of focus */
+.dropdown li a:hover,
+.dropdown li a:focus,
+.dropdown li a:active {
     background: #3969A6;
 }
 
+.dropdown.open {
+    display: block;
+}
+
+
+/* Style rules for small screens, which doesn't conflict with rules for larger screens.
+Rules that would have made a conflict are in the bottom of the sheet */
 header.mobile {
     margin-bottom: 20px;
 }
@@ -132,6 +151,7 @@ header.mobile > ul > li {
     text-align: left;
 }
 
+/* Hide mobile menu on large screens */
 #mobilemenu {
     display: none;
 }
@@ -159,10 +179,13 @@ header.mobile #mobilemenu .dropdown li a {
     line-height: 20px;
 }
 
+/* Hide menu button on large screens */
 header .togglebutton {
     display: none;
 }
 
+
+/* Footer */
 footer {
     background-color: #959dcc;
     position: absolute;
@@ -188,9 +211,7 @@ footer ul li a {
     text-decoration: none;
 }
 
-#dropdown {
-    background-color: #4d7ec0;
-}
+
 
 .text {
     width: 47%;
@@ -208,11 +229,13 @@ footer ul li a {
     padding-bottom: 3%;
 }
 
+/* Wrapper for all content on page */
 #wrapper {
     min-height: 100%;
     position: relative;
 }
 
+/* Elevator animation on first entry */
 #elevator {
     position: fixed;
     width: 100%;
@@ -232,7 +255,7 @@ footer ul li a {
     display: none;
 }
 
-
+/* On smaller screens, make text blocks and images wider, use special menu button */
 @media (max-width: 820px){
     .text{
         width: 96%;
