@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+Dokument detaljer
+P3 Changes 
+Agnete, Camilla, Emil og Vemund
+IT2805 November 2015
+Administrative detaljer
+Klientnavn: Institutt for datateknikk og informasjonsvitenskap ved NTNU (IDI) 
+Nettsidenavn: P15 
+Kontaktperson: Ikke tilgjengelig
+Link til nettsiden: 
+Endringer som vi har gjort
+Alle endringene som ble utført gjorde det lettere for oss å utføre planen fra P2. Det var overraskende lite endringer for oss, noe som viser at vi planlagte P2 bra.
+
+Endringer for drop-down meny for mobilløsning, etasjer.html og linjeforeninger.html
+Det viste seg at drop-down meny ble komplisert på mobil. Vi tenkte i P2 at det skulle komme en ekstra menybar under etasjer.html og linjeforeninger.html. Dette ble også komplisert å løse, og derfor løste vi det med å bare legge punkt meny på sidene der brukeren kan trykke seg til undersidene. 
+
+Endringer i k.html, 1.html, 2.html, 3.html, 4.html, 5.html
+For etasje-sidene valgte vi å droppe plantegningen, fordi nettsiden er lagt opp til å bare ha ett bilde per side. Løsningen ble å legge en link til plantegningen under “Etasjeoversikt”.
+
+Endringer i header.html
+Vi endret header.html til menu.html.
+
+Endringer på header.js og footer.js
+Begge disse filene ble til include.js.
+
+Sletting av bootstrap.css
+Vi tenkte å bruke bootstrap, men dette doppet vi fordi vi ville skrive alt selv.
+
+Modularitetskrav
+Det er to dokumenter som blir inkludert på alle sidene ved hjelp av javascript og AJAX. menu.html inneholder den øverste delen av siden, som for det meste består av navigasjonstrukturen til siden. I tillegg er det footer.html som inneholder den nederste delen av siden, som også inneholder et pat lenker.
+Endringer i mappestruktur og arbeidsfordeling
+Endringer i buttons/
+hamburger.png ble ikke noe av. menu-black.png og menu-white.png ligger nå i denne mappen.
+
+Endringer i css/
+Nevnt tidligere at vi skulle ha en bootstrap.css men vi droppet det. Derfor ligger det kun style.css her.
+
+Endringer i fonts/
+I P2 står det at vi skulle bruke raleway.otf. Vi inkluderte heller glyphicons-halflings-regular symbolsett, fordi da fungerer nettsiden alltid selvom Google sine servere går ned. Da blir standard fontet brukt istedet.
+
+
+Endringer i images/ 
+I P2 var det en skrivefeil der det stod at det skulle være en about.html her. Dette har blitt rettet opp nå og about.jpg ligger her nå.
+
+Endringer i js/
+Både header.js og footer.js ble til include.js.
+
+Endringer i project/
+footer.html og README.md ble lagt til. footer.html er det som vises nederst på nettsiden. README.md er en fil som vises på forsiden til prosjektet på github. 
+
+Oppdatert mappestruktur
+
+project/
+index.html
+about.html
+contact.html
+footer.html
+heiser.html
+menu.html
+README.md
+buttons/
+menu-black.png
+menu-white.png
+css/
+style.css
+etasjer/
+index.html
+kjeller.html
+1.html
+2.html
+3.html
+4.html
+5.html
+fonts/
+glyphicons-halflings-regular.eot
+glyphicons-halflings-regular.svg
+glyphicons-halflings-regular.ttf
+glyphicons-halflings-regular.woff
+glyphicons-halflings-regular.woff2
+images/
+p15.jpg
+kontakt.jpg
+about.jpg
+online.jpg
+abakus.jpg
+linjeforeninger.jpg
+k.jpg
+1.jpg
+2.jpg
+3.jpg
+4.jpg
+5.jpg
+etasjer.jpg
+heiser.jpg
+js/
+elevator.js
+include.js
+menu.js
+preload.js
+linjeforeninger/
+index.html
+abakus.html
+online.html
+
+Endelig arbeidsfordeling
+Filnavn
+Beskrivelse
+Ansvarlig
+Mappestruktur
+Etablere riktig mappestruktur, og laste ned eksterne ressurser
+Vemund
+Samtlige bilder i images/
+Alle bilder må anskaffes, enten ved å hente fra relevante, lovlige ressurser, eller ved å ta egne bilder. 
+Bildene må eventuelt redigeres slik at de holder en høy standard.
+Camilla
+project/
+index.html
+about.html
+contact.html
+Lage forside, kontakt oss og "Om P15"
+Vemund
+buttons/
+menu-black.png
+menu-white.png
+
+
+Lage en vektorfil av menu-black.png og menu-white.png.
+Agnete
+project/
+menu.html
+footer.html
+Lage meny og footer på nettsiden.
+Emil
+etasjer/
+index.html
+k.html
+1.html
+2.html
+Lage enkelte sider under etasjer/
+Agnete
+3.html
+4.html
+5.html
+heiser.html
+Lage resterende sider under etasjer/ og siden om heiser 
+Vemund
+linjeforeninger/
+index.html
+abakus.html
+online.html
+Lage samtlige sider under linjeforeninger/
+Camilla
+js/
+elevator.js
+dropdown.js
+include.js
+preload.js
+Lage scripts for heisanimasjon ved første besøk til siden, script for menyer som er tilpasset skjermstørrelse og script for å forhåndslaste bilder
+Emil
+css/
+style.css
+Siste endringer på style.css. Denne vil bli modifisert fortløpende mens en skriver .html-filene til siden.
+Agnete
+project/
+README.md
+Innholdet til denne filen vises på forsiden til prosjektet på github.
+Emil
+Testing og bugfixes
+Samtlige er ansvarlige for å teste sine egne filer for feil, inkludert responsivitet, ulike nettlesere og utseende
+Agnete, Camilla, Emil, Vemund
+
+</html>
