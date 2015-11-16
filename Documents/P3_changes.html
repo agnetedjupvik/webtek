@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P3: Changes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/Documents.css">
+</head>
+
+<body>
+	<header id="header">
+	    <h1 id="title">P3: Changes</h1>
+	    <p id="credits">
+	        Skrevet av Agnete Djupvik, Vemund Santi, Camilla Tran og Emil Taylor Bye<br/>
+	        16.november 2015
+	    </p>
+	</header>
+
+    <div class="col-xs-12 col-sm-3">
+        <nav>
+            <h2>Innhold</h2>
+            <ol>
+                <li><a href="#administrative_detaljer">Administrative detaljer</a></li>
+                <li><a href="#file_changes">Filendringer</a></li>
+                <li><a href="#modularitet">Modularitetskrav</a></li>
+                <li><a href="#changes_folders">Endringer struktur og arbeidsfordeling</a>
+                    <ol>
+                        <li><a href="#mappestruktur">Oppdatert mappestruktur</a></li>
+                        <li><a href="#endelig_arbeidsfordeling">Endelig arbeidsfordeling</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+	    <div class="col-xs-12 col-sm-8">
+        <h2 id="administrative_detaljer">Administrative detaljer</h2>
+        <p>
+            Klientnavn: Institutt for datateknikk og informasjonsvitenskap ved NTNU (IDI) <br/>
+            Nettsidenavn: P15 <br/>
+            Kontaktperson: Ikke tilgjengelig<br>
+            Link til nettsiden: <a href="http://folk.ntnu.no/vemundms/webtek/project/index.html">Informasjonsside om P15</a>
+        </p>
+        <h2 id="file_changes">Filendringer som vi har gjort</h2>
+        <p>
+            Alle endringene som ble utført gjorde det lettere for oss å utføre planen fra P2. Det var overraskende lite endringer for oss, noe som viser at vi planlagte P2 bra.
+            <br/><br/>
+            <b>Endringer for drop-down meny for mobilløsning, etasjer.html og linjeforeninger.html</b>
+        	<br>
+        	Det viste seg at drop-down meny ble komplisert på mobil. Vi tenkte i P2 at det skulle komme en ekstra menybar under etasjer.html og linjeforeninger.html. Dette ble også komplisert å løse, og derfor løste vi det med å bare legge punkt meny på sidene der brukeren kan trykke seg til undersidene. 
+        	<br>
+        	<br>
+        	<b>Endringer i k.html, 1.html, 2.html, 3.html, 4.html, 5.html</b>
+			<br>
+			For etasje-sidene valgte vi å droppe plantegningen, fordi nettsiden er lagt opp til å bare ha ett bilde per side. Løsningen ble å legge en link til plantegningen under “Etasjeoversikt”.
+			<br>
+        	<br>
+			<b>Endringer i header.html</b>
+			<br>
+			Vi endret header.html til menu.html.
+			<br>
+			<br>
+			<b>Endringer på header.js og footer.js</b>
+			<br>
+			Begge disse filene ble til include.js.
+			<br>
+			<br>
+			<b>Sletting av bootstrap.css</b>
+			<br>
+			Vi tenkte å bruke bootstrap, men dette doppet vi fordi vi ville skrive alt selv.
+        </p>
+        <h2 id="modularitet">Modularitetskrav</h2>
+        <p>
+			Det er to dokumenter som blir inkludert på alle sidene ved hjelp av javascript og AJAX. menu.html inneholder den øverste delen av siden, som for det meste består av navigasjonstrukturen til siden. I tillegg er det footer.html som inneholder den nederste delen av siden, som også inneholder et par lenker.
+        </p>
+
+        <h2 id="changes_folders">Endringer i mappestruktur og arbeidsfordeling</h2>
+        <p>
+			<b>Endringer i buttons/</b>
+			<br>
+			hamburger.png ble ikke noe av. menu-black.png og menu-white.png ligger nå i denne mappen.
+			<br><br>
+			<b>Endringer i css/</b>
+			<br>
+			Nevnt tidligere at vi skulle ha en bootstrap.css men vi droppet det. Derfor ligger det kun style.css her.
+			<br><br>
+			<b>Endringer i fonts/</b>
+			<br>
+			I P2 står det at vi skulle bruke raleway.otf. Vi inkluderte heller glyphicons-halflings-regular symbolsett, fordi da fungerer nettsiden alltid selvom Google sine servere går ned. Da blir standard fontet brukt istedet.
+			<br><br>
+			<b>Endringer i images/</b>
+			<br>
+			I P2 var det en skrivefeil der det stod at det skulle være en about.html her. Dette har blitt rettet opp nå og about.jpg ligger her nå.
+			<br><br>
+			<b>Endringer i js/</b>
+			<br>
+			Både header.js og footer.js ble til include.js. dropdrown.js var ikke nødvendlig å lage pga dette ble laget i menu.html.
+			<br><br>
+			<b>Endringer i project/</b>
+			<br>
+			footer.html og README.md ble lagt til. footer.html er det som vises nederst på nettsiden. README.md er en fil som vises på forsiden til prosjektet på github. 
+        </p>
+
+       <h3 id="mappestruktur">Oppdatert mappestruktur</h3>
+
+        project/
+        <ul>
+            <li>index.html</li>
+            <li>contact.html</li>
+            <li>about.html</li>
+            <li>heiser.html</li>
+            <li>menu.html</li>
+            <li>footer.html</li>
+			<li>README.md</li>
+            <li>css/
+                <ul>
+                    <li>style.css</li>
+                </ul>
+            </li>
+            <li>js/
+                <ul>
+                    <li>elevator.js</li>
+                    <li>menu.js</li>
+                    <li>include.js</li>
+                    <li>preload.js</li>
+                </ul>
+            </li>
+            <li>images/
+            <ul>
+                    <li>p15.jpg</li>
+                    <li>kontakt.jpg</li>
+                    <li>about.html</li>
+                    <li>online.jpg</li>
+                    <li>abakus.jpg</li>
+                    <li>linjeforeninger.jpg</li>
+                    <li>k.jpg</li>
+                    <li>1.jpg</li>
+                    <li>2.jpg</li>
+                    <li>3.jpg</li>
+                    <li>4.jpg</li>
+                    <li>5.jpg</li>
+                    <li>etasjer.jpg</li>
+                    <li>heiser.jpg</li>
+                </ul>
+            </li>
+            <li>fonts/
+                <ul>
+                    <li>glyphicons-halflings-regular.eot</li>
+					<li>glyphicons-halflings-regular.svg</li>
+					<li>glyphicons-halflings-regular.ttf</li>
+					<li>glyphicons-halflings-regular.woff</li>
+					<li>glyphicons-halflings-regular.woff2</li>
+                </ul>
+            </li>
+            <li>buttons/
+                <ul>
+                    <li>menu-black.png</li>
+                    <li>menu-white.png</li>
+                </ul>
+            </li>
+            <li>linjeforeninger/
+                <ul>
+                    <li>index.html</li>
+                    <li>abakus.html</li>
+                    <li>online.html</li>
+                </ul>
+            </li>
+            <li>etasjer/
+                <ul>
+                    <li>index.html</li>
+                    <li>k.html</li>
+                    <li>1.html</li>
+                    <li>2.html</li>
+                    <li>3.html</li>
+                    <li>4.html</li>
+                    <li>5.html</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3 id="endelig_arbeidsfordeling">Endelig arbeidsfordeling</h3>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Filnavn</th>
+                    <th>Beskrivelse</th>
+                    <th>Ansvarlig</th>
+                </tr>
+                <tr>
+                    <td>Mappestruktur</td>
+                    <td>Etablere riktig mappestruktur, og laste ned eksterne ressurser</td>
+                    <td>Vemund</td>
+                </tr>
+                <tr>
+                    <td>Samtlige bilder i images/</td>
+                    <td>Alle bilder må anskaffes, enten ved å hente fra relevante, lovlige ressurser, eller ved å ta
+                        egne bilder. <br/>Bildene må eventuelt redigeres slik at de holder en høy standard.</td>
+                    <td>Camilla</td>
+                </tr>
+                <tr>
+                    <td>project/<br>index.html<br>about.html<br>contact.html</td>
+                    <td>Lage forside, kontakt oss og "Om P15"</td>
+                    <td>Vemund</td>
+                </tr>
+                <tr>
+                    <td>buttons/<br>menu-black.png<br>menu-white.png</td>
+                    <td>Lage en vektorfil av menu-black.png og menu-white.png.</td>
+                    <td>Agnete</td>
+                </tr>
+                <tr>
+                    <td>menu.js<br/>footer.js</td>
+                    <td>Lage meny og footer på nettsiden.</td>
+                    <td>Emil</td>
+                </tr>
+                <tr>
+                    <td>etasjer/index.html<br/>k.html<br/>1.html<br/>2.html</td>
+                    <td>Lage enkelte sider under etasjer/</td>
+                    <td>Agnete</td>
+                </tr>
+                <tr>
+                    <td>3.html<br/>4.html<br/>5.html<br/>heiser.html</td>
+                    <td>Lage resterende sider under etasjer/ og siden om heiser </td>
+                    <td>Vemund</td>
+                </tr>
+                <tr>
+                    <td>linjeforeninger/index.html<br/>abakus.html<br/>online.html</td>
+                    <td>Lage samtlige sider under linjeforeninger/</td>
+                    <td>Camilla</td>
+                </tr>
+                <tr>
+                    <td>js/<br>elevator.js<br>dropdown.js<br>include.js<br>preload.js</td>
+                    <td>Lage scripts for heisanimasjon ved første besøk til siden, script for menyer som er tilpasset
+                        <br/>skjermstørrelse og script for å forhåndslaste bilder</td>
+                    <td>Emil</td>
+                </tr>
+                <tr>
+                    <td>style.css</td>
+                    <td>Siste endringer på style.css. Denne vil bli modifisert fortløpende mens en skriver
+                        .html-filene til siden.</td>
+                    <td>Agnete</td>
+                </tr>
+                <tr>
+                    <td>project/<br>README.md</td>
+                    <td>Innholdet til denne filen vises på forsiden til prosjektet på github.</td>
+                    <td>Emil</td>
+                </tr>
+                <tr>
+                    <td>Testing og bugfixes</td>
+                    <td>Samtlige er ansvarlige for å teste sine egne filer for feil, inkludert responsivitet,
+                        ulike nettlesere og utseende</td>
+                    <td>Agnete, Camilla, Emil, Vemund</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
