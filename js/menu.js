@@ -48,7 +48,7 @@ var registerThrottledEvent = function(eventString, callback) {
  * Usage: menu() - Only call this once per page.
  */
 var menu = function() {
-  /* If the page width is less than 992 pixels, we use the mobile menu. */
+  /* If the page width is less than 860 pixels, we use the mobile menu. */
   var isMobile = window.innerWidth <= 860;
 
   /* The object resposible for handling events for the full menu */
@@ -95,7 +95,7 @@ var menu = function() {
           openDropdowns[i].classList.remove("open");
         }
       }
-    }
+    };
 
     /* When the user hovers over a dropdown menu, we want to display it. */
     var dropdownMouseoverCallback = function() {
@@ -250,7 +250,7 @@ var menu = function() {
   (function () {
     var menuItems = document.querySelectorAll("header ul li a");
 
-    for (i = 0; i < menuItems.length; i++) {
+    for (var i = 0; i < menuItems.length; i++) {
       if (menuItems[i].href === window.location.href) {
         if (menuItems[i].parentNode.parentNode.classList.contains("dropdown")) {
           /*
@@ -280,7 +280,7 @@ var menu = function() {
   } ());
 
   /* Global event handlers */
-  registerThrottledEvent("resize", function(e) {
+  registerThrottledEvent("resize", function() {
     var isResizedMobile = window.innerWidth <= 860;
 
     if (isMobile && !isResizedMobile) {
