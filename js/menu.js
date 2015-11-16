@@ -266,6 +266,14 @@ var menu = function() {
           document.getElementById("mobilemenu").appendChild(menuItems[i].parentNode.parentNode.cloneNode(true));
         } else {
           menuItems[i].classList.add("active");
+
+          /*
+           * If this is the "parent" of a dropdown, we also want to copy the
+           * sub-menu to display on mobile devices.
+           */
+          if (menuItems[i].parentNode.getElementsByClassName("dropdown").length > 0) {
+            document.getElementById("mobilemenu").appendChild(menuItems[i].parentNode.getElementsByClassName("dropdown")[0].cloneNode(true));
+          }
         }
 
         break;
