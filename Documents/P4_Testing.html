@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P4: Testing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/Documents.css">
+</head>
+<body>
+<header id="header">
+    <h1 id="title">P4: Testing</h1>
+    <p id="credits">
+        Skrevet av Agnete Djupvik, Vemund Santi, Camilla Tran og Emil Taylor Bye<br/>
+        12.oktober 2015
+    </p>
+</header>
+<div class="col-xs-12 col-sm-3">
+    <nav>
+        <h2>Innhold</h2>
+        <ol>
+
+            <li><a href="#administrative_detaljer">Administrative detaljer</a></li>
+            <li><a href="#Brukerundersøkelse">Brukerundersøkelse</a>
+                <ol type="a">
+                    <li><a href="#Audiens">Audiens</a></li>
+                    <li><a href="#Plattformer">Plattformer</a></li>
+                    <li><a href="#Livetesting">Livetesting</a></li>
+                </ol>
+            </li>
+            <li><a href="#Tilbakemeldinger">Tilbakemeldinger</a>
+                <ol type="a">
+                    <li><a href="#Design">Design</a></li>
+                    <li><a href="#Innhold">Innhold</a></li>
+                    <li><a href="#Navigasjon">Navigasjon og brukervennlighet</a></li>
+                </ol>
+            </li>
+            <li><a href="#Endringer">Fremtidige endringer</a></li>
+            <li><a href="#Selvrefleksjon">Selvrefleksjon</a></li>
+        </ol>
+    </nav>
+</div>
+<div class="col-xs-12 col-sm-8">
+    <h2 id="administrative_detaljer">Administrative detaljer</h2>
+    <p>
+        Klientnavn: Institutt for datateknikk og informasjonsvitenskap ved NTNU (IDI) <br/>
+        Nettsidenavn: P15 <br/>
+        Kontaktperson: Ikke tilgjengelig
+    </p>
+    <h2 id="Brukerundersøkelse">Brukerundersøkelse</h2>
+    <p>
+        For å samle tilbakemeldinger på nettsiden opprettet vi en Google Form hvor brukere kunne svare på spørsmål
+        angående deres inntrykk av siden vår. Vi la vekt på at denne kun skulle bli brukt til innsamling av
+        statistisk data, ikke hvordan man faktisk interagerte med siden vår. Vi brukte skalaer hvor man kunne gi
+        poeng fra 1 - 5, hvor 5 var høyeste poengsum, og 1 var laveste. Undersøkelsen ble spredd via Facebook for å
+        nå et så bredt publikum som mulig, ettersom vi i denne undersøkelsen var ute etter mengdedata, ikke spesifikke
+        data om hva kun målgruppen til siden mente. Spørsmålene ble av den grunn fokusert opp mot hva brukeren syntes
+        om designet, det tekstlige innholdet og en generell mening om navigasjonstrukturen på siden. Dette er
+        spørsmål enhver bruker kan gjøre seg opp en mening om, og er ikke veldig spesifikt knyttet til målgruppen vår.
+        Link til undersøkelsen: <a href="http://goo.gl/forms/huOuF2Ku9G">http://goo.gl/forms/huOuF2Ku9G</a>
+        <br/><br/>
+        I tillegg til undersøkelsen på Google Forms gjennomførte vi et titalls brukerundersøkelser, hvor vi ga
+        testbrukerne en rekke oppgaver de skulle utføre på nettsiden vår, uten noen form for forklaring av
+        hvordan siden fungerte, eller hjelp underveis. Noen eksempler på oppgavene var:
+    </p>
+    <ul>
+        <li>Finn frem til informasjon om 3. etasje på P15.</li>
+        <li>Finn ut hvordan jeg kan kontakte Abakus.</li>
+        <li>Hvem er ansvarlig for denne siden?</li>
+        <li>Hvem lagde heisene på P15?</li>
+    </ul>
+    <p>
+        Halvparten av undersøkelsene ble utført på mobil, og halvparten på en stasjonær PC. Å få testdata fra
+        begge platformene var viktig, ettersom siden vår ser annerledes ut, og har en annen navigasjonsstruktur på
+        små skjermer enn på store skjermer.
+    </p>
+    <h3 id="Audiens">Audiens</h3>
+    <p>
+        Fra undersøkelsen som ble spredt på Facebook ønsket vi å nå et likt antall kvinner og menn, og en aldersgruppe
+        som var rundt vår egen. Det viste seg at vi traff nokså bra, med en liten overvekt av menn som svarte på
+        undersøkelsen. De fleste var i samme aldersgruppe, mellom 20 og 25 år. Av samtlige som svarte på undersøkelsen
+        var 38% kvinner, 62% menn, og 83% oppga at de var i aldersgruppen 20 - 25 år.
+    </p>
+    <h3 id="Plattformer">Plattformer</h3>
+    <p>
+        I Google Formen var det ingen krav om hvilken nettleser som skulle brukes, men brukerne kunne oppgi dette i
+        skjemaet. På den måten ville brukeren benytte nettleseren de er vant til, og ikke blande inn ytre faktorer
+        som forvirring ved bytte av nettleser. Det viste seg at 66% besøkte nettsiden med Chrome, 21% besøkte
+        nettleseren med Firefox, og 7.2% besøkte nettsiden med Internet Explorer. 72% besøkte nettsiden på mobil
+        eller tablet, mot kun 28% på en stasjonær plattform. Dette er mest sannsynlig et resultat av hvordan
+        testbrukerne fant undersøkelsen, hvor de fleste bladde gjennom Facebook på mobil.
+        <br/><br/>
+        Testgruppen bestod av 2 personer ansatt ved IDI, 10 personer fra datateknologi/informatikk som ble kontaktet
+        mens de satt på en av datasalene på P15, og 2 personer fra busstoppen ved Høgskoleringen Nord. På denne måten
+        fikk vi en testgruppe med et forhold til bygget, og som var en del av målgruppen til nettsiden.
+        <br/><br/>
+        Ved testing under oppsyn brukte vi stasjonære PCer på 7 av 14 brukere, og en smartmobil ved de resterende
+        testene. På stasjonær PC brukte vi Internet Explorer 3 ganger, Chrome 3 ganger, og Safari 1 gang. Ved testing
+        av smartmobiler ble Chrome benyttet samtlige ganger. 1 av 7 tilfeller var på en iPhone, resten av testene
+        skjedde på en Android-telefon.
+    </p>
+    <h3 id="Livetesting">Livetesting</h3>
+    <p>
+        Når vi testet på brukere under oppsyn ønsket vi fokus på å finne ut om det var enkelt for brukeren å finne
+        frem til den informasjonen han/hun ønsket seg. For å gjøre dette ga vi konkrete oppgaver til brukeren, og ba
+        brukeren om å “tenke høyt” mens vedkommende forsøkte å utføre oppgaven. Slik opplevde vi at vi fikk tydeligere
+        frem når brukeren ble forvirret eller bare brukte ekstra lang tid på å finne frem til noe.
+        <br/><br/>
+        Etter å ha fullført denne typen testing under oppsyn ba vi brukerne om å fylle ut skjemaet i Google Docs, i
+        tillegg til å gi oss konkrete tilbakemeldinger på hva som var enkelt, hva som var vanskelig, og features
+        brukeren kunne tenke seg i fremtiden.
+    </p>
+    <h2 id="Tilbakemeldinger">Tilbakemeldinger</h2>
+    <p>
+        Totalt svarte 83 personer på spørreundersøkelsen vår.
+    </p>
+    <h3 id="Design">Design</h3>
+    <p>
+        Fargevalget på siden vår fikk en gjennomsnittskarakter på 3.5. Dataene var jevne rundt dette punktet, det var
+        svært få som ga oss dårligere enn 3, men det var samtidig få som ga oss høyere enn 4. Vi konkluderer med at
+        nettsiden har et relativt godt fargevalg, som ikke trekker til seg oppmerksomhet fra brukeren, som var vårt mål.
+        <br/><br/>
+        Tekststørrelsen på siden fikk en snittskarakter på 4.3. Det var ingen svar under 3, så her også konkluderer
+        vi med at tekststørrelsen er tilpasset alle platformer.
+        <br/><br/>
+        Det var kun én person som rapporterte en feil med brukergrensesnittet. Tilbakemeldingen var at footeren til
+        siden tidvis ikke festet seg helt til bunnen av siden, men hadde et lyseblått mellomrom mellom footeren og
+        bunnen av nettleseren. Brukeren oppga at han brukte Internet Explorer på en stasjonær PC. Dette kan skyldes
+        at brukeren brukte en eldre versjon av IE, som er inkompatibel med HTML5, CSS3 eller Javascript-snuttene vi
+        har skrevet.
+    </p>
+    <h3 id="Innhold">Innhold</h3>
+    <p>
+        Det tekstlige innholdet på siden fikk en snittkarakter på 2.7. Her spriket det veldig i karakterene, så det
+        er tydelig at vi traff veldig ulikt i brukerbasen. Vi hadde dessverre ikke et eget spørsmål angående hvor
+        interessert brukeren var i innholdet på siden, men vi antar at testpersoner som ikke hadde særlig stor
+        interesse av å lese om P15 ga en dårlig score på dette spørsmålet.
+        <br/><br/>
+        Det ble innrapportert et par skrivefeil på siden, og noen tilfeller av feil bruk av preposisjoner osv.
+        Dette er små ting som er lett å rette opp i, og kan bli rettet på få minutter.
+    </p>
+    <h3 id="Navigasjon">Navigasjon og brukervennlighet</h3>
+    <p>
+        Menyen fikk en snittkarakter på 4.2. Dette indikerer at brukerne i snitt er svært fornøyde med menyen. Vi
+        er veldig tilfredse med dette, da dette var en av tingene vi har lagt stor vekt på når det kommer til
+        brukervennlighet og responsivitet, ved at vi redesignet menyen spesifikt med tanke på at et bredt utvalg
+        av skjermer skulle bruke siden vår.
+        <br/><br/>
+        Siden scorte høyt på brukervennlighet, hele 4.8. Dette bekrefter at nettsiden vår er tilpasset alle platformer,
+        og at det er en naturlig flyt i navigasjonsstrukturen på nettsiden. Med en slik høy score vil vi ikke endre
+        hvordan menyen oppfører seg, eller hvordan siden takler endring av vindustørrelsen.
+        <br/><br/>
+        Ved brukerundersøkelsene som ble gjennomført under observasjon var det ingen store problemer med å navigere seg
+        rundt på siden. Vi fikk et par testpersoner fra IDI til å prøve seg på siden, og det største problemet disse
+        hadde var å finne frem til hvordan man kontaktet Abakus. Dette skyldtes at de ikke forbandt Abakus med
+        linjeforeninger, og dermed ikke lette på riktig sted. Resten av prøvepersjonene var vant til menysystemet
+        på Android, og fant det naturlig å klikke på “hamburgermenyen” i hjørnet for å få frem menyen.
+        <br/><br/>
+        En enkelt tilbakemelding vi fikk høre flere ganger var at hamburgermenyen helst skulle lukkes når man klikket
+        utenfor den åpne menyen. Dette er oppførsel som er standard i Android-apper, som vi skal se nærmere på hvordan
+        vi kan implementere. Ved å registrere hvor en klikker på nettsiden skal det være greit nok å få til, men det
+        kreves mye testing før en slik feature kan gå ut i produksjon, ettersom det skal være samme oppførsel for
+        alle plattformer.
+        <br/><br/>
+        Helhetsinntrykket av siden havnet på en stødig 4.3 av 5, som vi sier oss svært fornøyd med. Dette er direkte
+        tilbakemelding om at nettsiden vår holder høy standard, og er tilpasset tidens trender på web.
+    </p>
+    <h2 id="Endringer">Fremtidige endringer</h2>
+    <p>
+        Ettersom vi ikke mottok noen spesielt alvorlige tilbakemeldinger på siden vår vil vi jobbe videre med å
+        gjøre nettsiden kompatibel med eldre nettlesere, helt ned til IE 6. Dette vil antakeligvis løse problemet
+        med at footeren vår ikke fester seg til bunnen av siden, hvilket er et problem vi ikke klarer å reprodusere.
+        Om vi hadde visst hvilket OS som ble brukt når denne buggen oppstod hadde vi vært nærmere å kunne gjenskape
+        problemet, men dette var ikke et spørsmål i undersøkelsen. Vi antar at brukeren brukte en eldre versjon av
+        Windows, som f.eks Windows XP.
+        <br/><br/>
+        Når det kommer til å få menyen til å forsvinne når man trykker utenfor på mobilversjonen, er dette også noe
+        vi vil prioritere. Dette er en feature som kun hjelper på helhetsinntrykket av siden, ettersom det ikke er
+        veldig alvorlig at man må trykke på hamburgerknappen for å få bort menyen igjen. Likevel er det noe som vil
+        bli satt pris på i det lange løp, og fjerne et lite irritasjonsmoment for brukerne. Som nevnt tidligere kan
+        dette være vanskelig å få kompatibelt med alle plattformer, spesielt om vi skal sikte på å være kompatible
+        med eldre nettlesere. Om dette skal bli en realitet burde vi implementere kode for å detektere hvilken
+        nettleserversjon som benyttes, slik at vi kjører ulike script basert på hvilken nettleser en bruker.
+        <br/><br/>
+        Skrivefeilene kan bli rettet opp i på et par minutter, og vil bli rettet først.
+    </p>
+    <h2 id="Selvrefleksjon">Selvrefleksjon</h2>
+    <p>
+        Alt i alt har prosjektet vært spennende og lærerikt for oss, både for å lære oss HTML/CSS/JS, men også for å
+        lære å jobbe i team og å justere arbeidet etter brukeres tilbakemeldinger.
+        Vi har lært at det er svært nyttig å bruke verktøy for å produksjonssette nye endringer, og versjonskontroll
+        med Git har vært svært vellykket. Spesielt har dette vært godt å ha når ting har gått galt og man måtte hente
+        opp en gammel versjon av koden.
+        <br/><br/>
+        På gruppen hadde de fleste jobbet med en eller annen form for webutvikling før. Det som faktisk var det nye
+        for oss var å jobbe med webutvikling uten et eneste rammeverk. Tidligere har vi støttet oss på ting som
+        Jquery og Angular for Javascript, og Less/Sass for CSS. Derfor opplevdes det som en veldig god erfaring å
+        for eksempel implementere responsivitet uten å ha for eksempel Bootstrap til å gjøre det for deg. Vi lærte at
+        det faktisk ikke er umulig å lage mye fra bunnen av selv, men så også flere situasjoner hvor vi kunne ønsket
+        oss å ta i bruk et rammeverk for å få raskere progresjon for å komme enda lengre på prosjektet på den tiden
+        vi hadde.
+        <br/><br/>
+        En annen utfordring vi har sett her er at arbeidsmengden brukt til repetitivt arbeid har blitt større enn
+        nødvendig, og om man kunne brukt rammeverk hadde dette blitt kraftig redusert. Særlig blir det mye metadata
+        å skrive inn i &lt;head&gt; i
+        HTML-filene når man skriver alt fra bunnen. For de av oss som har jobbet med Django går dette lettere, og
+        man slipper veldig mye gjentagelse. Dersom vi skulle jobbet videre med å utvide dette prosjektet ville vi
+        ønsket å implementere for eksempel Django i løsningen vår for å kunne fokusere på det viktigste, fremfor å
+        skrive inn helt lik metadata i fil etter fil.
+        <br/><br/>
+        Som team har det vært spesielt for oss at vi har gruppemedlemmer fra flere ulike studieprogrammer,
+        og hvor langt vi har kommet i studieprogresjonen varierte. Derfor har vi vært aktive på å kommunisere oftere
+        digitalt enn å møtes, og vår kommunikasjon på egen gruppe på Slack har fungert fint. Siden vi har vært flinke
+        til å oppdatere hverandre på progresjonen underveis har behovet for å møtes ofte blitt redusert, og vi har
+        kunnet
+        holdt møtene til å kun finne sted når en frist nærmer seg for å gå gjennom alles arbeid.
+    </p>
+</div>
+</body>
+</html>
